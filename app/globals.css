@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-violet: #6127B8;
+  --brand-violet-dark: #3F167D;
+  --brand-violet-soft: #F2E9FF;
+  --brand-lilac: #E8D7FF;
+  --brand-yellow-light: #FFF5BD;
+  --brand-yellow: #FFD83D;
+  --brand-yellow-dark: #F4B900;
+  --brand-cream: #FFFCF2;
+  --brand-white: #FFFFFF;
+  --text-primary: #32145F;
+  --text-body: #4C4260;
+  --border-soft: #E8DDF5;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-body);
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overflow-x: clip;
+    position: relative;
+    background-color: #FFFFFF;
+    color: var(--text-body);
+    font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: -0.015em;
+  }
+
+  ::selection {
+    background-color: #E8D7FF;
+    color: #3F167D;
+  }
+}
+
+/* Organic curved blob clip paths */
+.blob-mask-1 {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.blob-mask-2 {
+  border-radius: 40% 60% 70% 30% / 40% 40% 60% 55%;
+}
+
+.blob-mask-3 {
+  border-radius: 55% 45% 40% 60% / 50% 60% 40% 50%;
+}
+
+.blob-mask-hero {
+  border-radius: 48% 52% 68% 32% / 42% 48% 52% 58%;
+}
+
+/* ========================================================
+   ORGANIC BLOB MORPHING & SMOOTH MOTION ANIMATIONS
+   ======================================================== */
+
+@keyframes blob-morph {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 55%;
+    transform: translate(2px, -4px) rotate(1deg);
+  }
+  66% {
+    border-radius: 55% 45% 40% 60% / 50% 60% 40% 50%;
+    transform: translate(-3px, 3px) rotate(-1deg);
+  }
+}
+
+@keyframes blob-morph-offset {
+  0%, 100% {
+    border-radius: 58% 42% 32% 68% / 58% 32% 68% 42%;
+    transform: translate(12px, 12px) rotate(0deg) scale(1.02);
+  }
+  33% {
+    border-radius: 42% 58% 68% 32% / 42% 42% 58% 58%;
+    transform: translate(15px, 8px) rotate(1.5deg) scale(1.03);
+  }
+  66% {
+    border-radius: 53% 47% 42% 58% / 48% 58% 42% 52%;
+    transform: translate(8px, 14px) rotate(-1.5deg) scale(1.01);
+  }
+}
+
+@keyframes blob-morph-hero {
+  0%, 100% {
+    border-radius: 48% 52% 68% 32% / 42% 48% 52% 58%;
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    border-radius: 58% 42% 45% 55% / 48% 54% 46% 52%;
+    transform: translateY(-6px) rotate(0.8deg);
+  }
+  66% {
+    border-radius: 42% 58% 60% 40% / 44% 46% 54% 56%;
+    transform: translateY(4px) rotate(-0.8deg);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(12px, -14px) scale(1.04);
+  }
+  66% {
+    transform: translate(-10px, 10px) scale(0.97);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+.animate-blob-morph {
+  animation: blob-morph 9s ease-in-out infinite;
+}
+
+.animate-blob-morph-offset {
+  animation: blob-morph-offset 9s ease-in-out infinite;
+}
+
+.animate-blob-hero {
+  animation: blob-morph-hero 10s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 5s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 14s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3.5s ease-in-out infinite;
+}
+
+/* Hand-drawn dotted line dashes */
+@keyframes dash-animation {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+.animate-dash {
+  animation: dash-animation 20s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
