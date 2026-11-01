@@ -56,22 +56,22 @@ export const siteConfig: SiteConfig = {
     youtube: "https://youtube.com/@weespritespreschool",
   },
   navigation: [
-    { label: "Home", href: "#hero" },
-    { label: "About Us", href: "#about" },
-    { label: "Programs", href: "#programs" },
-    { label: "Admissions", href: "#admissions" },
-    { label: "Franchise Opportunity", href: "#franchise" },
-    { label: "Gallery", href: "#gallery" },
-    { label: "Contact Us", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about" },
+    { label: "Programs", href: "/programs" },
+    { label: "Admissions", href: "/admissions" },
+    { label: "Franchise Opportunity", href: "/franchise" },
+    { label: "Gallery", href: "/gallery" },
+    { label: "Contact Us", href: "/contact" },
   ],
   cta: {
     admissions: {
       label: "Enquire for Admissions",
-      href: "#admissions",
+      href: "/admissions",
     },
     franchise: {
       label: "Explore Franchise Opportunities",
-      href: "#franchise",
+      href: "/franchise",
     },
   },
 };

@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowRight, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { programsContent, ProgramItem } from "@/lib/content";
 import { ProgramCard } from "./program-card";
 import { Reveal } from "../ui/reveal";
@@ -36,14 +37,25 @@ export function ProgramsSection({ onOpenEnquiry }: ProgramsSectionProps) {
           </div>
 
           <Reveal delay={0.2}>
-            <CtaButton
-              variant="lilac"
-              size="sm"
-              onClick={() => onOpenEnquiry("admissions")}
-              className="self-start md:self-auto shrink-0"
-            >
-              Enquire About All Programs
-            </CtaButton>
+            <div className="flex flex-wrap items-center gap-3">
+              <Link href="/programs">
+                <CtaButton
+                  variant="outline"
+                  size="sm"
+                  className="bg-white/80 border-brand-violet/30 text-brand-violet hover:bg-brand-violet hover:text-white"
+                >
+                  Explore Full Curriculum
+                </CtaButton>
+              </Link>
+              <CtaButton
+                variant="lilac"
+                size="sm"
+                onClick={() => onOpenEnquiry("admissions")}
+                className="self-start md:self-auto shrink-0"
+              >
+                Enquire for Admissions
+              </CtaButton>
+            </div>
           </Reveal>
         </div>
 

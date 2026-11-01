@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Check, Sparkles } from "lucide-react";
+import { Check } from "lucide-react";
 import { whyChooseContent } from "@/lib/content";
 import { CurvedPhoto } from "../ui/curved-photo";
 import { WaveDivider } from "../ui/wave-divider";
@@ -64,14 +64,14 @@ export function WhyChooseUsSection() {
                   aspectRatio="square"
                   className="w-full"
                   badge={
-                    <div className="absolute -bottom-3 -right-2 md:bottom-2 md:-right-4 bg-brand-yellow text-text-primary rounded-3xl p-3 shadow-card border-2 border-brand-violet-dark text-center select-none transform rotate-3 hover:rotate-0 transition-transform">
-                      <p className="text-xs md:text-sm font-black uppercase tracking-tight">
+                    <div className="absolute bottom-1 right-1 sm:-bottom-3 sm:-right-2 md:bottom-2 md:-right-4 pointer-events-auto w-max min-w-[90px] sm:min-w-[105px] bg-brand-yellow text-text-primary rounded-2xl sm:rounded-3xl px-3.5 py-2.5 sm:px-4 sm:py-3 shadow-card border-2 border-brand-violet-dark text-center select-none transform rotate-3 hover:rotate-0 transition-transform">
+                      <p className="text-xs sm:text-sm font-black uppercase tracking-tight whitespace-nowrap">
                         Curiosity
                       </p>
-                      <p className="text-xs md:text-sm font-black uppercase tracking-tight">
+                      <p className="text-xs sm:text-sm font-black uppercase tracking-tight whitespace-nowrap">
                         Creativity
                       </p>
-                      <p className="text-xs md:text-sm font-black uppercase tracking-tight">
+                      <p className="text-xs sm:text-sm font-black uppercase tracking-tight whitespace-nowrap">
                         Confidence
                       </p>
                     </div>

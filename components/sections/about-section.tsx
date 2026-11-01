@@ -2,7 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import { Heart, ShieldCheck, Sparkles, GraduationCap } from "lucide-react";
+import Link from "next/link";
+import { Heart, ShieldCheck, Smile, GraduationCap } from "lucide-react";
 import { aboutContent, trustPoints } from "@/lib/content";
 import { CtaButton } from "../ui/cta-button";
 import { CurvedPhoto } from "../ui/curved-photo";
@@ -17,7 +18,7 @@ export function AboutSection({ onOpenEnquiry }: AboutSectionProps) {
   const iconMap: Record<string, React.ReactNode> = {
     Heart: <Heart className="w-5 h-5 text-brand-violet" />,
     ShieldCheck: <ShieldCheck className="w-5 h-5 text-emerald-600" />,
-    Sparkles: <Sparkles className="w-5 h-5 text-brand-yellow-dark" />,
+    Smile: <Smile className="w-5 h-5 text-brand-yellow-dark" />,
     GraduationCap: <GraduationCap className="w-5 h-5 text-brand-violet" />,
   };
 
@@ -40,11 +41,11 @@ export function AboutSection({ onOpenEnquiry }: AboutSectionProps) {
                   aspectRatio="4/3"
                   className="w-full"
                   badge={
-                    <div className="absolute -top-4 -left-3 md:-top-5 md:-left-4 w-26 h-26 md:w-28 md:h-28 rounded-full bg-brand-violet text-white p-2.5 shadow-card flex flex-col items-center justify-center text-center border-2 border-brand-yellow transform -rotate-6 hover:rotate-0 transition-transform">
-                      <span className="text-[11px] md:text-xs font-black leading-tight">
+                    <div className="absolute top-1 left-1 sm:-top-4 sm:-left-3 md:-top-5 md:-left-4 pointer-events-auto w-24 h-24 sm:w-26 sm:h-26 md:w-28 md:h-28 rounded-full bg-brand-violet text-white p-2 sm:p-2.5 shadow-card flex flex-col items-center justify-center text-center border-2 border-brand-yellow transform -rotate-6 hover:rotate-0 transition-transform shrink-0">
+                      <span className="text-[11px] md:text-xs font-black leading-tight whitespace-nowrap">
                         Childhood Today
                       </span>
-                      <span className="text-[9px] md:text-[10px] font-semibold text-brand-yellow-light mt-0.5">
+                      <span className="text-[9px] md:text-[10px] font-semibold text-brand-yellow-light mt-0.5 whitespace-nowrap">
                         Confidence Tomorrow
                       </span>
                     </div>
@@ -73,13 +74,14 @@ export function AboutSection({ onOpenEnquiry }: AboutSectionProps) {
 
             <Reveal delay={0.35}>
               <div className="pt-2">
-                <CtaButton
-                  variant="yellow"
-                  size="md"
-                  onClick={() => onOpenEnquiry("admissions")}
-                >
-                  {aboutContent.buttonLabel}
-                </CtaButton>
+                <Link href="/about">
+                  <CtaButton
+                    variant="yellow"
+                    size="md"
+                  >
+                    {aboutContent.buttonLabel}
+                  </CtaButton>
+                </Link>
               </div>
             </Reveal>
           </div>

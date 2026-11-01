@@ -2,7 +2,11 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "WEE SPRITES Preschool | Learn, Play & Grow",
+  metadataBase: new URL("https://weesprites.com"),
+  title: {
+    default: "WEE SPRITES Preschool | Learn, Play & Grow",
+    template: "%s | WEE SPRITES Preschool",
+  },
   description:
     "Discover WEE SPRITES Preschool, a joyful environment where children learn, play and grow. Explore programs, admissions and franchise opportunities.",
   keywords: [

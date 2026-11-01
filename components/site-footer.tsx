@@ -86,7 +86,7 @@ export function SiteFooter() {
               {programsContent.programs.map((p) => (
                 <li key={p.id}>
                   <Link
-                    href="#programs"
+                    href={`/programs#${p.id}`}
                     className="hover:text-brand-yellow transition-colors block py-0.5"
                   >
                     {p.name}
@@ -129,13 +129,17 @@ export function SiteFooter() {
           <p>
             &copy; 2026 {siteConfig.name} Preschool. All Rights Reserved.
           </p>
-          <div className="flex gap-4">
-            <Link href="#hero" className="hover:text-white transition-colors">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+            <Link href="/privacy" className="hover:text-brand-yellow transition-colors">
               Privacy Policy
             </Link>
-            <span>|</span>
-            <Link href="#hero" className="hover:text-white transition-colors">
-              Terms & Conditions
+            <span>•</span>
+            <Link href="/policy" className="hover:text-brand-yellow transition-colors">
+              School Policies & Terms
+            </Link>
+            <span>•</span>
+            <Link href="/sitemap" className="hover:text-brand-yellow transition-colors">
+              HTML Sitemap
             </Link>
           </div>
         </div>

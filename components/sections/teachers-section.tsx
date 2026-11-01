@@ -17,23 +17,24 @@ export function TeachersSection({ onOpenEnquiry }: TeachersSectionProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Staff Team Photo */}
-          <div className="lg:col-span-6 flex justify-center">
-            <Reveal delay={0.1}>
-              <div className="relative w-full max-w-[520px] rounded-3xl overflow-hidden bg-white p-2 shadow-card border-2 border-brand-violet/20 hover:border-brand-violet transition-colors">
-                <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden bg-brand-violet-soft/40">
+          <div className="lg:col-span-7 flex justify-center">
+            <Reveal delay={0.1} className="w-full flex justify-center">
+              <div className="relative w-full max-w-2xl lg:max-w-none rounded-[32px] sm:rounded-[36px] md:rounded-[40px] overflow-hidden bg-white p-3 sm:p-4 shadow-floating border-2 md:border-[3px] border-brand-violet hover:border-brand-violet hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
+                <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full rounded-2xl sm:rounded-[24px] md:rounded-[28px] overflow-hidden bg-brand-violet-soft/40">
                   <Image
                     src="/images/teachers-team.jpg"
                     alt={teachersContent.imageAlt}
                     fill
                     priority
-                    className="object-cover transition-transform duration-500 hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 50vw"
+                    className="object-cover object-center transition-transform duration-700 hover:scale-105"
                   />
                 </div>
-                <div className="p-3 text-center">
-                  <p className="text-xs md:text-sm font-extrabold text-brand-violet">
+                <div className="p-3.5 sm:p-4 text-center">
+                  <p className="text-sm sm:text-base md:text-lg font-extrabold text-brand-violet">
                     Dedicated Educators & Leadership Team
                   </p>
-                  <p className="text-[11px] text-text-body mt-0.5">
+                  <p className="text-xs sm:text-sm text-text-body mt-1">
                     WEE SPRITES Preschool & Day Care Annual Celebration
                   </p>
                 </div>
@@ -42,7 +43,7 @@ export function TeachersSection({ onOpenEnquiry }: TeachersSectionProps) {
           </div>
 
           {/* Right Column: Copy & Action */}
-          <div className="lg:col-span-6 text-left space-y-5 relative">
+          <div className="lg:col-span-5 text-left space-y-5 relative">
             <DottedPath variant="curve-left" className="absolute -top-10 -right-6 hidden sm:block" />
 
             <Reveal delay={0.1}>

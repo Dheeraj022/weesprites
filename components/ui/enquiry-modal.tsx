@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { X, CheckCircle2, Loader2, Sparkles, Phone, Mail, User, MapPin } from "lucide-react";
+import { X, CheckCircle2, Loader2, Phone, Mail, User, MapPin } from "lucide-react";
 import { CtaButton } from "./cta-button";
 
 const admissionsSchema = z.object({
@@ -113,28 +113,28 @@ export function EnquiryModal({
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-violet-dark/60 backdrop-blur-sm animate-fadeIn"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-brand-violet-dark/60 backdrop-blur-sm animate-fadeIn overflow-y-auto"
     >
       <div
-        className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden border border-brand-violet-soft"
+        className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden border border-brand-violet-soft my-auto max-h-[92vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Tabs */}
-        <div className="bg-brand-violet-soft/60 p-4 border-b border-border-soft flex items-center justify-between">
-          <div className="flex gap-2">
+        <div className="bg-brand-violet-soft/60 p-3 sm:p-4 border-b border-border-soft flex items-center justify-between gap-2 shrink-0">
+          <div className="flex gap-1.5 sm:gap-2">
             <button
               type="button"
               onClick={() => {
                 setActiveTab("admissions");
                 setSubmittedType(null);
               }}
-              className={`px-4 py-2 rounded-full text-xs md:text-sm font-extrabold transition-all ${
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs md:text-sm font-extrabold transition-all ${
                 activeTab === "admissions"
                   ? "bg-brand-violet text-white shadow"
                   : "bg-white text-text-primary hover:bg-brand-lilac"
               }`}
             >
-              Admissions Enquiry
+              Admissions
             </button>
             <button
               type="button"
@@ -142,20 +142,20 @@ export function EnquiryModal({
                 setActiveTab("franchise");
                 setSubmittedType(null);
               }}
-              className={`px-4 py-2 rounded-full text-xs md:text-sm font-extrabold transition-all ${
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs md:text-sm font-extrabold transition-all ${
                 activeTab === "franchise"
                   ? "bg-brand-yellow-dark text-text-primary shadow"
                   : "bg-white text-text-primary hover:bg-brand-yellow-light"
               }`}
             >
-              Franchise Opportunity
+              Franchise
             </button>
           </div>
           <button
             type="button"
             onClick={onClose}
             aria-label="Close modal"
-            className="w-8 h-8 rounded-full bg-white text-text-body flex items-center justify-center hover:bg-brand-violet hover:text-white transition-colors"
+            className="w-8 h-8 rounded-full bg-white text-text-body flex items-center justify-center hover:bg-brand-violet hover:text-white transition-colors shrink-0"
           >
             <X className="w-5 h-5" />
           </button>

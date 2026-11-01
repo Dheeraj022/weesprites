@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { X, ZoomIn, ChevronLeft, ChevronRight } from "lucide-react";
 import { galleryContent, GalleryItem } from "@/lib/content";
 import { Reveal } from "../ui/reveal";
@@ -62,14 +63,15 @@ export function GallerySection() {
           </div>
 
           <Reveal delay={0.2}>
-            <CtaButton
-              variant="lilac"
-              size="sm"
-              onClick={() => openLightbox(galleryContent.items[0])}
-              className="self-start md:self-auto shrink-0 font-bold"
-            >
-              {galleryContent.ctaLabel}
-            </CtaButton>
+            <Link href="/gallery">
+              <CtaButton
+                variant="lilac"
+                size="sm"
+                className="self-start md:self-auto shrink-0 font-bold"
+              >
+                {galleryContent.ctaLabel} →
+              </CtaButton>
+            </Link>
           </Reveal>
         </div>
 

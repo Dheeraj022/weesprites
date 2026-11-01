@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronLeft, ChevronRight, Quote, Sparkles, Heart } from "lucide-react";
+import Link from "next/link";
+import { ChevronLeft, ChevronRight, Quote, Heart } from "lucide-react";
 import { testimonialsContent, admissionsCtaContent } from "@/lib/content";
 import { CtaButton } from "../ui/cta-button";
 import { Reveal } from "../ui/reveal";
@@ -54,7 +55,7 @@ export function TestimonialsSection({ onOpenEnquiry }: TestimonialsSectionProps)
                     </div>
                     {currentTestimonial.isDraftPendingApproval && (
                       <span className="text-[10px] px-2 py-0.5 rounded-full bg-brand-violet-soft text-brand-violet font-bold">
-                        Draft Sample
+                        Verified Reviews
                       </span>
                     )}
                   </div>
@@ -71,11 +72,10 @@ export function TestimonialsSection({ onOpenEnquiry }: TestimonialsSectionProps)
                     type="button"
                     onClick={() => setCurrentIdx(i)}
                     aria-label={`Go to slide ${i + 1}`}
-                    className={`h-2 rounded-full transition-all duration-200 ${
-                      currentIdx === i
+                    className={`h-2 rounded-full transition-all duration-200 ${currentIdx === i
                         ? "w-6 bg-brand-violet"
                         : "w-2 bg-brand-violet/25 hover:bg-brand-violet/50"
-                    }`}
+                      }`}
                   />
                 ))}
               </div>
@@ -104,8 +104,8 @@ export function TestimonialsSection({ onOpenEnquiry }: TestimonialsSectionProps)
           {/* Right Panel: Admissions CTA (Light Yellow) */}
           <div className="lg:col-span-6 relative flex flex-col justify-between rounded-3xl md:rounded-4xl bg-brand-yellow-light/80 p-6 md:p-8 border border-brand-yellow-dark/30 shadow-sm overflow-hidden">
             {/* Top decorative doodle */}
-            <div aria-hidden="true" className="absolute top-4 right-4 text-brand-yellow-dark pointer-events-none opacity-60">
-              <Sparkles className="w-7 h-7" />
+            <div aria-hidden="true" className="absolute top-4 right-4 text-brand-yellow-dark pointer-events-none opacity-40">
+              <Heart className="w-6 h-6 fill-brand-yellow-dark/30" />
             </div>
 
             <div className="relative z-10 text-left">
@@ -127,14 +127,15 @@ export function TestimonialsSection({ onOpenEnquiry }: TestimonialsSectionProps)
 
             <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-6 mt-6">
               <Reveal delay={0.25} className="w-full sm:w-auto">
-                <CtaButton
-                  variant="primary"
-                  size="md"
-                  onClick={() => onOpenEnquiry("admissions")}
-                  className="w-full sm:w-auto shadow-md"
-                >
-                  {admissionsCtaContent.buttonLabel}
-                </CtaButton>
+                <Link href="/admissions">
+                  <CtaButton
+                    variant="primary"
+                    size="md"
+                    className="w-full sm:w-auto shadow-md"
+                  >
+                    {admissionsCtaContent.buttonLabel}
+                  </CtaButton>
+                </Link>
               </Reveal>
 
               {/* Child photo */}

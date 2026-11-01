@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { X, Sparkles, ArrowRight } from "lucide-react";
+import { X, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { CtaButton } from "./ui/cta-button";
 
@@ -63,7 +63,6 @@ export function MobileNav({ isOpen, onClose, onOpenEnquiry }: MobileNavProps) {
             }}
             className="w-full py-3.5 px-4 rounded-full bg-brand-yellow text-text-primary font-bold text-sm shadow hover:bg-brand-yellow-dark transition-colors flex items-center justify-center gap-2"
           >
-            <Sparkles className="w-4 h-4 text-brand-violet" />
             <span>Explore Franchise Opportunities</span>
           </button>
 

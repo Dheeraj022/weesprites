@@ -58,7 +58,7 @@ export function CurvedPhoto({
         <div
           aria-hidden="true"
           className={cn(
-            "absolute inset-0 translate-x-3 translate-y-3 md:translate-x-4 md:translate-y-4 scale-[1.02] pointer-events-none opacity-90 transition-transform duration-500",
+            "absolute inset-0 translate-x-1 translate-y-1 sm:translate-x-2.5 sm:translate-y-2.5 md:translate-x-3 md:translate-y-3 scale-[1.01] pointer-events-none opacity-90 transition-transform duration-500",
             offsetShapeMap[variant],
             offsetBgColor[offsetBg],
             animateBlob && !isRounded && "animate-blob-morph-offset"
@@ -88,7 +88,7 @@ export function CurvedPhoto({
       {badge && (
         <div
           className={cn(
-            "absolute z-10",
+            "absolute inset-0 z-10 pointer-events-none",
             animateBlob ? "animate-float-gentle" : ""
           )}
         >

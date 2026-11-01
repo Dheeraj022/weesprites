@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MapPin, Phone, Mail, Clock, MessageSquare, Sparkles } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageSquare } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { CtaButton } from "../ui/cta-button";
 import { Reveal } from "../ui/reveal";
@@ -92,8 +92,7 @@ export function ContactSection({ onOpenEnquiry }: ContactSectionProps) {
             <Reveal delay={0.2}>
               <div className="rounded-3xl md:rounded-4xl bg-gradient-to-br from-brand-violet-soft via-white to-brand-yellow-light/40 p-6 md:p-10 border-2 border-brand-violet shadow-soft text-left space-y-6">
                 <div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-yellow text-text-primary font-black text-xs uppercase mb-3">
-                    <Sparkles className="w-3.5 h-3.5 text-brand-violet" />
+                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-brand-yellow text-text-primary font-black text-xs uppercase mb-3">
                     Quick Enquiry Desk
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-brand-violet">

@@ -34,12 +34,13 @@ export function FacilitiesSection() {
             <Reveal key={facility.id} delay={0.1 + idx * 0.08}>
               <div className="group rounded-3xl overflow-hidden bg-brand-cream/50 border border-border-soft hover:shadow-floating hover:-translate-y-2 transition-all duration-500 ease-out flex flex-col h-full cursor-pointer">
                 {/* Photo */}
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-white">
+                <div className="relative aspect-[16/10] sm:aspect-[4/3] lg:aspect-[16/10] w-full overflow-hidden bg-brand-violet-soft/30">
                   <Image
                     src={facility.image}
                     alt={facility.title}
                     fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                 </div>
 

@@ -2,7 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import { CheckCircle2, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { CheckCircle2 } from "lucide-react";
 import { franchiseContent } from "@/lib/content";
 import { CtaButton } from "../ui/cta-button";
 import { CurvedPhoto } from "../ui/curved-photo";
@@ -30,8 +31,7 @@ export function FranchiseSection({ onOpenEnquiry }: FranchiseSectionProps) {
           {/* Left Column: Heading, Copy, Highlights, CTA */}
           <div className="lg:col-span-7 text-left space-y-6">
             <Reveal delay={0.05}>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-                <Sparkles className="w-4 h-4 text-brand-yellow" />
+              <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
                 <span className="text-xs md:text-sm font-black uppercase tracking-wider text-brand-yellow">
                   PRIMARY BUSINESS OPPORTUNITY
                 </span>
@@ -65,12 +65,21 @@ export function FranchiseSection({ onOpenEnquiry }: FranchiseSectionProps) {
             </div>
 
             <Reveal delay={0.35}>
-              <div className="pt-3">
+              <div className="pt-3 flex flex-wrap items-center gap-3">
+                <Link href="/franchise">
+                  <CtaButton
+                    variant="yellow"
+                    size="lg"
+                    className="shadow-xl"
+                  >
+                    Explore Franchise Model →
+                  </CtaButton>
+                </Link>
                 <CtaButton
-                  variant="yellow"
+                  variant="outline"
                   size="lg"
+                  className="bg-white/10 text-white border-white/30 hover:bg-white hover:text-brand-violet"
                   onClick={() => onOpenEnquiry("franchise")}
-                  className="shadow-xl"
                 >
                   {franchiseContent.buttonLabel}
                 </CtaButton>
@@ -90,11 +99,11 @@ export function FranchiseSection({ onOpenEnquiry }: FranchiseSectionProps) {
                   aspectRatio="square"
                   className="w-full"
                   badge={
-                    <div className="absolute -bottom-3 -left-2 md:-bottom-3 md:-left-4 bg-brand-yellow text-text-primary rounded-3xl p-3 shadow-card border-2 border-brand-violet-dark text-center select-none transform -rotate-3 hover:rotate-0 transition-transform">
-                      <p className="text-xs md:text-sm font-black uppercase tracking-tight">
+                    <div className="absolute bottom-1 left-1 sm:-bottom-3 sm:-left-2 md:-bottom-3 md:-left-4 pointer-events-auto w-max min-w-[95px] sm:min-w-[110px] bg-brand-yellow text-text-primary rounded-2xl sm:rounded-3xl px-3.5 py-2.5 sm:px-4 sm:py-3 shadow-card border-2 border-brand-violet-dark text-center select-none transform -rotate-3 hover:rotate-0 transition-transform">
+                      <p className="text-xs sm:text-sm font-black uppercase tracking-tight whitespace-nowrap">
                         Shape Future
                       </p>
-                      <p className="text-[11px] font-bold text-brand-violet">
+                      <p className="text-xs font-bold text-brand-violet whitespace-nowrap mt-0.5">
                         Grow with Us
                       </p>
                     </div>

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { CtaButton } from "./ui/cta-button";
@@ -13,18 +14,80 @@ export interface SiteHeaderProps {
 }
 
 export function SiteHeader({ onOpenEnquiry }: SiteHeaderProps) {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState("Home");
 
   useEffect(() => {
+    if (pathname === "/about") {
+      setActiveItem("About Us");
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 20);
+      };
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      handleScroll();
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+
+    if (pathname === "/programs" || pathname === "/programme") {
+      setActiveItem("Programs");
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 20);
+      };
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      handleScroll();
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+
+    if (pathname === "/admissions" || pathname === "/admission") {
+      setActiveItem("Admissions");
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 20);
+      };
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      handleScroll();
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+
+    if (pathname === "/franchise") {
+      setActiveItem("Franchise Opportunity");
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 20);
+      };
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      handleScroll();
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+
+    if (pathname === "/gallery") {
+      setActiveItem("Gallery");
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 20);
+      };
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      handleScroll();
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+
+    if (pathname === "/contact" || pathname === "/contact-us") {
+      setActiveItem("Contact Us");
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 20);
+      };
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      handleScroll();
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      // Dynamic scroll spy for navigation items
+      // Dynamic scroll spy for navigation items on home page
       const sections = siteConfig.navigation
+        .filter((item) => item.href.includes("#") || item.href === "/")
         .map((item) => {
-          const id = item.href.replace("#", "");
+          const id = item.href === "/" ? "hero" : item.href.replace("/#", "").replace("#", "");
           const el = document.getElementById(id);
           return { label: item.label, el };
         })
@@ -43,7 +106,7 @@ export function SiteHeader({ onOpenEnquiry }: SiteHeaderProps) {
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
   return (
     <>
@@ -56,7 +119,7 @@ export function SiteHeader({ onOpenEnquiry }: SiteHeaderProps) {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-5 lg:px-6 xl:px-8 flex items-center justify-between gap-2 lg:gap-3 xl:gap-6">
           {/* Logo */}
-          <Link href="#hero" className="flex items-center group shrink-0">
+          <Link href="/" className="flex items-center group shrink-0">
             <div className="relative h-9 w-36 sm:h-9 sm:w-40 lg:h-9 lg:w-40 xl:h-11 xl:w-48 2xl:h-12 2xl:w-52">
               <Image
                 src="/logo/logo.png"
@@ -94,14 +157,15 @@ export function SiteHeader({ onOpenEnquiry }: SiteHeaderProps) {
 
           {/* Right Action CTA & Mobile Hamburger */}
           <div className="flex items-center gap-2 xl:gap-3 shrink-0">
-            <CtaButton
-              variant="yellow"
-              size="sm"
-              onClick={() => onOpenEnquiry("franchise")}
-              className="hidden sm:inline-flex text-[11px] lg:text-xs xl:text-sm font-extrabold text-brand-violet-dark shadow-sm px-3.5 py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-2.5"
-            >
-              Explore Franchise Opportunities
-            </CtaButton>
+            <Link href="/franchise">
+              <CtaButton
+                variant="yellow"
+                size="sm"
+                className="hidden sm:inline-flex text-[11px] lg:text-xs xl:text-sm font-extrabold text-brand-violet-dark shadow-sm px-3.5 py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-2.5"
+              >
+                Explore Franchise Opportunities
+              </CtaButton>
+            </Link>
 
             {/* Mobile Menu Button */}
             <button

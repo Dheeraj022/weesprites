@@ -78,7 +78,7 @@ export interface HeroSlide {
   variant: "hero" | "blob2";
   badge: {
     items: string[];
-    icon: "Heart" | "Sparkles";
+    icon?: "Heart" | "Smile";
   };
 }
 
@@ -132,7 +132,6 @@ export const heroSlides: HeroSlide[] = [
     variant: "blob2",
     badge: {
       items: ["High ROI", "360° Setup", "Full Support"],
-      icon: "Sparkles",
     },
   },
 ];
@@ -151,7 +150,7 @@ export const trustPoints = [
   {
     title: "Play-Based Learning",
     description: "Joyful exploration sparking creativity, critical thinking, and motor skills.",
-    icon: "Sparkles",
+    icon: "Smile",
   },
   {
     title: "Experienced Educators",

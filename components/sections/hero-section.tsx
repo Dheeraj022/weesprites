@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { Sparkles, Heart, ChevronLeft, ChevronRight, Briefcase, GraduationCap } from "lucide-react";
+import { Heart, ChevronLeft, ChevronRight, Briefcase, GraduationCap } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { heroSlides, HeroSlide } from "@/lib/content";
 import { CtaButton } from "../ui/cta-button";
@@ -110,22 +110,21 @@ export function HeroSection({ onOpenEnquiry }: HeroSectionProps) {
           <AnimatePresence mode="wait">
             <motion.div
               key={slide.id}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
               className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
             >
               {/* Left Column: Copy & CTAs */}
               <div className="lg:col-span-6 xl:col-span-7 text-left space-y-6">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-violet-soft border border-border-soft">
-                  <Sparkles className="w-4 h-4 text-brand-violet" />
+                <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-brand-violet-soft border border-border-soft">
                   <span className="text-xs md:text-sm font-extrabold text-brand-violet tracking-wide uppercase">
                     {slide.eyebrow}
                   </span>
                 </div>
 
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-brand-violet">
+                <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-brand-violet">
                   {slide.headlineFirst}{" "}
                   <span className="text-brand-yellow-dark block sm:inline">
                     {slide.headlineSecond}
@@ -178,22 +177,20 @@ export function HeroSection({ onOpenEnquiry }: HeroSectionProps) {
                     offsetBg="yellow"
                     className="w-full"
                     badge={
-                      <div className="absolute -bottom-2 -right-2 md:bottom-2 md:-right-2 bg-brand-yellow rounded-3xl p-3 md:p-4 shadow-card border-2 border-brand-violet-dark text-center select-none transform rotate-3 hover:rotate-0 transition-transform">
+                      <div className="absolute bottom-1 right-1 sm:-bottom-2 sm:-right-2 md:bottom-2 md:-right-2 pointer-events-auto w-max min-w-[88px] sm:min-w-[100px] bg-brand-yellow rounded-2xl sm:rounded-3xl px-3.5 py-2.5 sm:px-4 sm:py-3 shadow-card border-2 border-brand-violet-dark text-center select-none transform rotate-3 hover:rotate-0 transition-transform">
                         {slide.badge.items.map((item, i) => (
                           <p
                             key={i}
-                            className="text-xs md:text-sm font-black text-brand-violet uppercase tracking-tight leading-tight"
+                            className="text-xs sm:text-sm font-black text-brand-violet uppercase tracking-tight leading-tight whitespace-nowrap"
                           >
                             {item}
                           </p>
                         ))}
-                        <div className="flex justify-center mt-1">
-                          {slide.badge.icon === "Heart" ? (
+                        {slide.badge.icon === "Heart" && (
+                          <div className="flex justify-center mt-1">
                             <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
-                          ) : (
-                            <Sparkles className="w-3.5 h-3.5 text-brand-violet fill-brand-violet" />
-                          )}
-                        </div>
+                          </div>
+                        )}
                       </div>
                     }
                   />
