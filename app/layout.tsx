@@ -35,6 +35,12 @@ export const metadata: Metadata = {
     description:
       "A joyful environment where children learn, play and grow with confidence. Explore programs, admissions and franchise opportunities.",
   },
+  icons: {
+    icon: [
+      { url: "/weespritesoriginalogo.png", sizes: "any" },
+    ],
+    apple: "/weespritesoriginalogo.png",
+  },
 };
 
 export const viewport: Viewport = {

@@ -113,20 +113,20 @@ export function SiteHeader({ onOpenEnquiry }: SiteHeaderProps) {
       <header
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-md border-b border-border-soft py-2.5 md:py-3"
-            : "bg-white/95 backdrop-blur-sm py-3 md:py-4 border-b border-border-soft/60"
+            ? "bg-white/95 backdrop-blur-md shadow-md border-b border-border-soft py-1 sm:py-1.5 md:py-2"
+            : "bg-white/95 backdrop-blur-sm py-2 sm:py-2.5 md:py-3.5 border-b border-border-soft/60"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-5 lg:px-6 xl:px-8 flex items-center justify-between gap-2 lg:gap-3 xl:gap-6">
           {/* Logo */}
-          <Link href="/" className="flex items-center group shrink-0">
-            <div className="relative h-9 w-36 sm:h-9 sm:w-40 lg:h-9 lg:w-40 xl:h-11 xl:w-48 2xl:h-12 2xl:w-52">
+          <Link href="/" className="flex items-center group shrink-0" aria-label="WEE SPRITES Preschool Home">
+            <div className="relative h-[84px] w-[84px] sm:h-[88px] sm:w-[88px] md:h-20 md:w-20 lg:h-[88px] lg:w-[88px] xl:h-[96px] xl:w-[96px] 2xl:h-[104px] 2xl:w-[104px]">
               <Image
-                src="/logo/logo.png"
+                src="/weespritesoriginalogo.png"
                 alt="WEE SPRITES Preschool & Day Care"
                 fill
                 priority
-                className="object-contain object-left group-hover:scale-[1.02] transition-transform"
+                className="object-contain group-hover:scale-105 transition-transform"
               />
             </div>
           </Link>
