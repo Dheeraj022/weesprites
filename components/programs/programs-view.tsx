@@ -52,16 +52,16 @@ export function ProgramsView() {
 
   const programsData: DetailedProgram[] = [
     {
-      id: "play-group",
-      name: "Play Group",
+      id: "toddler-group",
+      name: "Toddler Group",
       tagline: "Tender Beginnings & Sensory Discovery",
-      ageRange: "1.5 – 2.5 Years",
+      ageRange: "18 Months+",
       timings: "09:00 AM – 11:30 AM",
-      ratio: "1 : 6 (Low Ratio)",
-      image: "/images/program-playgroup.jpg",
+      ratio: "1 : 10 (4 Teachers for 40 Children)",
+      image: "/schoolimages/two-sisters-ball-pool.jpg",
       accentBg: "lilac",
       overview:
-        "The Play Group program marks a toddler's gentle transition from home to the wider world. We focus on separation comfort, sensory stimulation, and joyful socialization in an environment filled with warm affection and tender care.",
+        "The Toddler Group program marks a toddler's gentle transition from home to the wider world. We focus on separation comfort, sensory stimulation, and joyful socialization in an environment filled with warm affection and tender care.",
       milestones: [
         "Sensory exploration through textured surfaces, finger paints, and water play",
         "Gentle socialization, sharing awareness, and building separation ease",
@@ -84,13 +84,13 @@ export function ProgramsView() {
       id: "pre-nursery",
       name: "Pre-Nursery",
       tagline: "Curiosity, Language & Social Play",
-      ageRange: "2.5 – 3.5 Years",
+      ageRange: "2+ Years",
       timings: "09:00 AM – 12:00 PM",
-      ratio: "1 : 8 (Intimate Mentorship)",
-      image: "/images/program-prenursery.jpg",
+      ratio: "1 : 10 (4 Teachers for 40 Children)",
+      image: "/schoolimages/girl-heart-craft.jpg",
       accentBg: "yellow",
       overview:
-        "At Pre-Nursery, natural curiosity turns into structured discovery. Children expand their vocabulary, explore tactile Montessori tools, and learn the joy of cooperative play alongside their peers.",
+        "At Pre-Nursery, natural curiosity turns into structured discovery. Children expand their vocabulary, explore tactile learning tools, and learn the joy of cooperative play alongside their peers.",
       milestones: [
         "Vocabulary expansion, multi-word expressions, and clear self-expression",
         "Fine motor preparation: pencil grasp, wooden pegboards, and lacing shapes",
@@ -99,7 +99,7 @@ export function ProgramsView() {
       ],
       activities: [
         "Daily morning circle time and feeling check-ins",
-        "Montessori cylinder blocks and tactile sorting",
+        "Wooden cylinder blocks and tactile sorting",
         "Creative paper-tearing and clay sculpting",
         "Pretend play corner: kitchen, doctor, grocery market",
       ],
@@ -113,10 +113,10 @@ export function ProgramsView() {
       id: "nursery",
       name: "Nursery",
       tagline: "Foundations of Phonics & Creative Inquiry",
-      ageRange: "3.5 – 4.5 Years",
-      timings: "09:00 AM – 12:30 PM",
-      ratio: "1 : 8 (Intimate Mentorship)",
-      image: "/images/program-nursery.jpg",
+      ageRange: "3–4 Years",
+      timings: "09:00 AM – 12:00 PM",
+      ratio: "1 : 10 (4 Teachers for 40 Children)",
+      image: "/schoolimages/boy-phonics-aeroplane-craft.jpg",
       accentBg: "lilac",
       overview:
         "Our Nursery program introduces early literacy and numeracy through play-based immersion. Children develop phonetic awareness, number logic, and inquisitive scientific habits that lay the bedrock for lifelong learning.",
@@ -140,12 +140,12 @@ export function ProgramsView() {
     },
     {
       id: "lkg",
-      name: "LKG (Lower Kindergarten)",
+      name: "LKG",
       tagline: "Early Literacy, STEM & Structured Discovery",
-      ageRange: "4.5 – 5.5 Years",
-      timings: "09:00 AM – 01:00 PM",
-      ratio: "1 : 10 (Focused Guidance)",
-      image: "/images/program-lkg.jpg",
+      ageRange: "4–5 Years",
+      timings: "09:00 AM – 12:00 PM",
+      ratio: "1 : 10 (4 Teachers for 40 Children)",
+      image: "/schoolimages/toddler-lilac-owl-craft.jpg",
       accentBg: "yellow",
       overview:
         "LKG balances play-way joy with structured cognitive building blocks. Children progress from letter sounds to reading two- and three-letter words, writing sentences, and understanding everyday mathematics.",
@@ -169,12 +169,12 @@ export function ProgramsView() {
     },
     {
       id: "ukg",
-      name: "UKG (Upper Kindergarten)",
+      name: "UKG",
       tagline: "Primary Readiness, Confidence & Leadership",
-      ageRange: "5.5 – 6.5 Years",
-      timings: "09:00 AM – 01:30 PM",
-      ratio: "1 : 10 (Focused Guidance)",
-      image: "/images/program-ukg.jpg",
+      ageRange: "5–6 Years",
+      timings: "09:00 AM – 12:00 PM",
+      ratio: "1 : 10 (4 Teachers for 40 Children)",
+      image: "/schoolimages/curly-toddler-puppet-craft.jpg",
       accentBg: "lilac",
       overview:
         "UKG is the culmination of preschool education. We equip graduates with high academic readiness, emotional poise, and leadership confidence to excel in formal primary schools across CBSE, ICSE, and IB curriculums.",
@@ -198,38 +198,67 @@ export function ProgramsView() {
     },
     {
       id: "evening-program",
-      name: "Day Care & Evening Enrichment",
-      tagline: "Warm After-School Sanctuary & Hobby Exploration",
-      ageRange: "2.0 – 10.0 Years",
-      timings: "12:30 PM – 07:00 PM (Flexible Slots)",
-      ratio: "1 : 8 (Dedicated Caregivers)",
-      image: "/images/program-evening.jpg",
+      name: "Evening Program",
+      tagline: "Enrichment Activities & Guided After-School Care",
+      ageRange: "2.5–12 Years",
+      timings: "Flexible Afternoon & Evening Slots",
+      ratio: "1 : 10 (4 Teachers for 40 Children)",
+      image: "/schoolimages/classroom-roundtable-crafts.jpg",
       accentBg: "yellow",
       overview:
-        "A peaceful, stimulating after-school sanctuary tailored for working parents. We offer nutritious meals, supervised rest, homework support, and an array of creative hobby activities under caring supervision.",
+        "An engaging, joyful evening program designed for children aged 2.5 to 12 years. We offer creative arts, hobby exploration, supervised homework support, and active movement in a secure, loving setting.",
       milestones: [
-        "Consistent daily rest and wellness routines for refreshed evenings",
-        "Completion of school assignments with patient educator guidance",
-        "Exploration of extracurricular hobbies: dance, music, yoga, and martial arts",
-        "Social bonding across mixed age groups fostering mentorship and empathy",
+        "Creative exploration in art, music, storytelling, and movement",
+        "Assisted school homework completion with patient mentors",
+        "Healthy social interaction across mixed age groups fostering collaboration",
+        "Physical vitality through guided indoor play and fitness activities",
       ],
       activities: [
-        "Nutritious warm snacks and hygienic rest routines",
-        "Supervised homework and reading assistance",
         "Art, craft, pottery, and origami workshops",
+        "Supervised homework and reading assistance",
         "Active play in air-conditioned indoor play areas",
+        "Music, drama, and rhythm exploration",
       ],
       specialHighlights: [
-        "Flexible hourly, half-day, and full-day subscription packages",
-        "Live attendance and meal updates for parents",
-        "Emergency pediatric caregiver on campus until 7:00 PM",
+        "Flexible hourly and monthly enrolment options",
+        "Safe, hygienic, and CCTV-monitored environment",
+        "Dedicated mentor guidance for every child",
+      ],
+    },
+    {
+      id: "day-care",
+      name: "Day Care",
+      tagline: "Safe, Caring & Joyful Daylong Sanctuary",
+      ageRange: "12 Months+",
+      timings: "8:00 AM – 8:00 PM",
+      ratio: "1 : 10 (4 Teachers for 40 Children)",
+      image: "/schoolimages/daycare-baby-ballpool.jpg",
+      accentBg: "lilac",
+      overview:
+        "A peaceful, stimulating home-away-from-home for children aged 12 months and above. Operating from 8:00 AM to 8:00 PM, our Day Care provides warm care, nutritious meals, hygienic rest zones, and age-appropriate sensory play.",
+      milestones: [
+        "Healthy daily sleep, dining, and activity schedules",
+        "Sensory motor exploration and language stimulation",
+        "Safe socialization and early emotional security",
+        "Gross and fine motor development through tender guidance",
+      ],
+      activities: [
+        "Nutritious warm meals and sanitized nap routines",
+        "Story reading, sensory mat exploration, and soft toy play",
+        "Supervised indoor play and outdoor garden walks",
+        "Regular hygiene routines and personalized attention",
+      ],
+      specialHighlights: [
+        "Extended timings: 8:00 AM to 8:00 PM for working parents",
+        "Strict hygiene, child-proof fixtures, and 24/7 CCTV surveillance",
+        "Trained pediatric caregivers and background-verified staff",
       ],
     },
   ];
 
   const dailySchedule = [
     { time: "09:00 AM", title: "Warm Arrival & Morning Circle", desc: "Joyful greetings, action rhymes, daily calendar, and feelings check-in." },
-    { time: "09:40 AM", title: "Montessori Hands-On Learning", desc: "Autonomous workstation selection: phonics, math manipulatives, and sensory kits." },
+    { time: "09:40 AM", title: "Hands-On Learning & Discovery", desc: "Autonomous workstation selection: phonics, math manipulatives, and sensory kits." },
     { time: "10:30 AM", title: "Nutritious Snack & Table Etiquette", desc: "Healthy dining, hand hygiene, and courteous conversation practice." },
     { time: "11:00 AM", title: "Active Indoor/Outdoor Motor Play", desc: "Climbing modules, obstacle courses, ball pools, dance, and yoga balance." },
     { time: "11:45 AM", title: "Sensory Arts & Creative Dramatics", desc: "Painting, clay sculpting, storytelling, puppet theatre, and role-play." },
@@ -278,7 +307,7 @@ export function ProgramsView() {
 
               <Reveal delay={0.25}>
                 <p className="text-base sm:text-lg text-text-body leading-relaxed max-w-2xl">
-                  From gentle first discoveries in Play Group to confident primary readiness in UKG, our Montessori-inspired, play-based curriculum adapts to your child&apos;s natural developmental milestones.
+                  From gentle first discoveries in Toddler Group to confident primary readiness in UKG, our child-centric, play-based curriculum adapts to your child&apos;s natural developmental milestones.
                 </p>
               </Reveal>
 
@@ -293,7 +322,7 @@ export function ProgramsView() {
                   </CtaButton>
                   <Link href="/about">
                     <CtaButton variant="outline" size="lg">
-                      Learn About Our Pedagogy →
+                      Learn About Our Approach →
                     </CtaButton>
                   </Link>
                 </div>
@@ -311,7 +340,7 @@ export function ProgramsView() {
                     : "bg-white text-text-body border border-border-soft hover:bg-brand-violet-soft/60 hover:text-brand-violet"
                 }`}
               >
-                All Programs (6)
+                All Programs (7)
               </button>
               {programsData.map((p) => (
                 <button
@@ -559,7 +588,7 @@ export function ProgramsView() {
                     <th className="p-4 font-black">Age Range</th>
                     <th className="p-4 font-black">Timings</th>
                     <th className="p-4 font-black">Ratio</th>
-                    <th className="p-4 font-black">Core Pedagogy Focus</th>
+                    <th className="p-4 font-black">Core Curriculum Focus</th>
                     <th className="p-4 font-black text-center">Action</th>
                   </tr>
                 </thead>

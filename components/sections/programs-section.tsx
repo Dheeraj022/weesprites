@@ -59,10 +59,10 @@ export function ProgramsSection({ onOpenEnquiry }: ProgramsSectionProps) {
           </Reveal>
         </div>
 
-        {/* 6 Cards Grid: 1 col on mobile, 2 on tablet, 3 on laptop, 6 on wide desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 md:gap-5">
+        {/* Programs Cards Grid: responsive across mobile, tablet, laptop, and desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3 sm:gap-3.5 md:gap-4 items-stretch">
           {programsContent.programs.map((prog, idx) => (
-            <Reveal key={prog.id} delay={0.1 + idx * 0.06}>
+            <Reveal key={prog.id} delay={0.1 + idx * 0.06} className="h-full">
               <ProgramCard
                 program={prog}
                 onSelect={(p) => {

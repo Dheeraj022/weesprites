@@ -39,15 +39,15 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   name: "WEE SPRITES",
   descriptor: "Preschool & Day Care",
-  tagline: "A Bright Beginning for a Brighter Tomorrow",
-  phone: "+91 98765 43210", // Marked as draft placeholder for client confirmation
-  email: "admissions@weesprites.com", // Marked as draft placeholder for client confirmation
+  tagline: "We care, we share, for the future, we prepare",
+  phone: "+91 95409 27000",
+  email: "weesprites.vaspuri@gmail.com",
   address: {
-    line1: "Plot No. 42, Sector 5",
-    line2: "Green Park Avenue",
+    line1: "A-98 Shankar Garden",
+    line2: "Vikaspuri",
     city: "New Delhi",
     state: "Delhi",
-    pincode: "110016",
+    pincode: "110018",
     country: "India",
   },
   socials: {
@@ -59,10 +59,10 @@ export const siteConfig: SiteConfig = {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "Programs", href: "/programs" },
-    { label: "Admissions", href: "/admissions" },
-    { label: "Franchise Opportunity", href: "/franchise" },
+    { label: "Admission", href: "/admissions" },
+    { label: "Franchise", href: "/franchise" },
     { label: "Gallery", href: "/gallery" },
-    { label: "Contact Us", href: "/contact" },
+    { label: "Contact", href: "/contact" },
   ],
   cta: {
     admissions: {

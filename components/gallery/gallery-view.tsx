@@ -45,195 +45,467 @@ export function GalleryView() {
   const galleryPhotos: GalleryPhoto[] = [
     {
       id: "p-1",
-      title: "Gandhi Jayanti Celebrations",
+      title: "Baisakhi Festive Celebrations",
       category: "Festivals",
-      image: "/images/gallery/gallery-gandhi-jayanti.jpg",
-      alt: "Preschoolers celebrating Gandhi Jayanti in festive attire with handmade spectacle artwork",
-      description: "Students learn universal values of truth, peace, and harmony through celebratory dress-up and artwork.",
+      image: "/schoolimages/baisakhi-celebration.jpg",
+      alt: "WEE SPRITES family and students celebrating Baisakhi with traditional photobooth props and folk decor",
+      description: "Students and families celebrate cultural festivals with joyful folk photobooths, dance, and traditional decorations.",
     },
     {
       id: "p-2",
-      title: "Dussehra & Cultural Enactment",
+      title: "Janmashtami Radha & Krishna",
       category: "Festivals",
-      image: "/images/gallery/gallery-dussehra.jpg",
-      alt: "Children dressed in royal traditional costumes celebrating Dussehra",
-      description: "Immersive traditional enactments bringing Indian cultural heritage and storytelling to life.",
+      image: "/schoolimages/janmashtami-radha-krishna.jpg",
+      alt: "Preschoolers lovingly dressed as Radha and Krishna with flute and peacock feather mukut",
+      description: "Children immersed in traditional cultural storytelling and dress-up celebrations.",
     },
     {
       id: "p-3",
-      title: "Tiger Mask & Animal Craft Day",
-      category: "Creative Arts",
-      image: "/images/gallery/gallery-tiger-craft.jpg",
-      alt: "Young learner proudly showcasing handmade paper tiger masks",
-      description: "Tactile paper-folding, color blending, and wildlife curiosity training fine motor coordination.",
+      title: "Sports Day Pride & Uniform",
+      category: "Stage & Events",
+      image: "/schoolimages/sports-day-wee-sprites-uniform.jpg",
+      alt: "Student in official WEE SPRITES lilac uniform receiving prize on Sports Day from the principal",
+      description: "Celebrating athletic participation, motor coordination, and sportsmanship in our lilac uniform.",
     },
     {
       id: "p-4",
-      title: "Annual Day 2025–26 Onstage Dance",
+      title: "Community Helpers Day",
       category: "Stage & Events",
-      image: "/images/gallery/gallery-annual-day-stage.jpg",
-      alt: "Preschoolers performing energetic themed group dance on Annual Day stage",
-      description: "Building unshakeable stage poise, rhythm, and collaborative teamwork before a cheering audience.",
+      image: "/schoolimages/community-helpers-firefighter-chef.jpg",
+      alt: "Preschoolers dressed as Firefighter and Executive Chef with educator in front of Community Helpers mural",
+      description: "Role-play and career day dress-up teaching young children about civic heroes and helpers.",
     },
     {
       id: "p-5",
-      title: "Janmashtami Little Krishna",
+      title: "Christmas Reindeer Photobooth",
       category: "Festivals",
-      image: "/images/gallery/gallery-krishna.jpg",
-      alt: "Toddler dressed as Little Krishna with peacock feather flute",
-      description: "Joyful festive traditions celebrated with traditional attire, folk melodies, and sweet makhan delicacies.",
+      image: "/schoolimages/christmas-reindeer-photobooth.jpg",
+      alt: "Toddler in festive Santa tracksuit inside WEE SPRITES handcrafted Christmas photobooth",
+      description: "Winter holiday joy with handcrafted reindeer, Christmas tree, and snowman installations.",
     },
     {
       id: "p-6",
+      title: "Santa Claus Festive Visit",
+      category: "Festivals",
+      image: "/schoolimages/santa-claus-celebration.jpg",
+      alt: "Santa Claus celebrating Christmas joyfully with young toddlers at WEE SPRITES",
+      description: "Holiday cheer and gift-sharing with Santa Claus bringing smiles to every little learner.",
+    },
+    {
+      id: "p-7",
+      title: "Christmas Tree & Santa Crafts",
+      category: "Creative Arts",
+      image: "/schoolimages/christmas-craft-tree.jpg",
+      alt: "Young boy in winter jacket proudly holding handmade Christmas tree craft",
+      description: "Developing fine motor coordination and decorative creativity through festive holiday crafting.",
+    },
+    {
+      id: "p-8",
+      title: "Little Doctor & Police Puppet",
+      category: "Classroom",
+      image: "/schoolimages/little-doctor-police-puppet.jpg",
+      alt: "Preschool girl in white coat with stethoscope holding handcrafted police puppet",
+      description: "Early childhood imaginative role-play sparking curiosity about healthcare and community service.",
+    },
+    {
+      id: "p-9",
+      title: "Pattern Writing Workbook Discovery",
+      category: "Classroom",
+      image: "/schoolimages/pattern-writing-workbook.jpg",
+      alt: "Proud preschool student displaying official WEE SPRITES Pattern Writing curriculum book",
+      description: "Foundational pre-writing skills, pencil grip development, and pattern tracing in official school workbooks.",
+    },
+    {
+      id: "p-10",
+      title: "Classroom Activity Table & Art",
+      category: "Creative Arts",
+      image: "/schoolimages/classroom-activity-table.jpg",
+      alt: "Students happily drawing and coloring around the red activity table",
+      description: "Cooperative group artwork, crayon blending, and tactile creativity in our cheerful classrooms.",
+    },
+    {
+      id: "p-11",
+      title: "Hands-on Origami Paper Fans",
+      category: "Creative Arts",
+      image: "/schoolimages/hands-on-origami-craft.jpg",
+      alt: "Two boys folding colorful paper fans at the activity table",
+      description: "Fine motor precision, bilateral coordination, and spatial folding through paper craft.",
+    },
+    {
+      id: "p-12",
+      title: "Outdoor Turf & Play Zone",
+      category: "Toddler & Play",
+      image: "/schoolimages/outdoor-play-zone.jpg",
+      alt: "Children playing on safe green turf slide and rocking animals in WEE SPRITES playground",
+      description: "Gross motor agility, healthy climbing, and joyful active recess on cushioned artificial grass.",
+    },
+    {
+      id: "p-13",
+      title: "Teacher & Children Play Activities",
+      category: "Toddler & Play",
+      image: "/schoolimages/teacher-outdoor-activities.jpg",
+      alt: "Dedicated educator interacting warmly with students on the play turf",
+      description: "Warm educator guidance fostering social bonding, cooperative turn-taking, and confidence.",
+    },
+    {
+      id: "p-14",
+      title: "Ball Pool Sensory Discoveries",
+      category: "Toddler & Play",
+      image: "/schoolimages/hero-toddler-ball-pit.jpg",
+      alt: "Smiling toddler laughing in colorful sensory ball pit",
+      description: "Multi-sensory color recognition and joyful motor exploration in sanitized indoor ball pools.",
+    },
+    {
+      id: "p-15",
+      title: "Play Zone Swing Car Riding",
+      category: "Toddler & Play",
+      image: "/schoolimages/toddler-swing-car.jpg",
+      alt: "Toddler boy navigating twist swing car across educational play mat",
+      description: "Balance, directionality, and gross motor strength through safe self-propelled ride-ons.",
+    },
+    {
+      id: "p-16",
+      title: "Valentine Heart Wand Craft",
+      category: "Creative Arts",
+      image: "/schoolimages/girl-heart-craft.jpg",
+      alt: "Preschooler proudly showcasing handmade red heart wand with message pocket",
+      description: "Expressing family love and gratitude through heartfelt scissor cutting and paper assembly.",
+    },
+    {
+      id: "p-17",
+      title: "Independence Day Patriotic Attire",
+      category: "Festivals",
+      image: "/schoolimages/independence-day-patriot.jpg",
+      alt: "Young girl in tricolor traditional dress sitting warmly with educator",
+      description: "Instilling national pride, cultural respect, and unity through celebratory assemblies.",
+    },
+    {
+      id: "p-18",
+      title: "Traditional Festive Celebrations",
+      category: "Festivals",
+      image: "/schoolimages/festival-traditional-dress.jpg",
+      alt: "Preschool girl in festive ethnic lehenga with maang tikka and bangles",
+      description: "Joyful celebration of Indian festivals embracing rich cultural traditions and heritage.",
+    },
+    {
+      id: "p-19",
+      title: "Animal Safari Presentation",
+      category: "Stage & Events",
+      image: "/schoolimages/animal-safari-presentation.jpg",
+      alt: "Student in dalmatian costume in safari-themed class presentation frame",
+      description: "Public speaking poise and wildlife knowledge through costumed classroom presentations.",
+    },
+    {
+      id: "p-20",
+      title: "Little Lamb Cotton Craft",
+      category: "Creative Arts",
+      image: "/schoolimages/lamb-cotton-costume.jpg",
+      alt: "Toddler dressed in handmade cotton ball lamb costume",
+      description: "Tactile texture exploration using soft cotton balls, puppet ears, and imaginative dress-up.",
+    },
+    {
+      id: "p-21",
+      title: "Halloween Friendly Witches",
+      category: "Stage & Events",
+      image: "/schoolimages/halloween-witch-photobooth.jpg",
+      alt: "Preschool girl dressed as friendly witch with broomstick at Halloween backdrop",
+      description: "Imaginative costume fun, drama, and festive storytelling celebrating global holidays.",
+    },
+    {
+      id: "p-22",
+      title: "Halloween Black Cat Costume",
+      category: "Stage & Events",
+      image: "/schoolimages/halloween-cat-costume.jpg",
+      alt: "Toddler girl in black dress with painted cat whiskers and space buns",
+      description: "Whimsical dress-up days nurturing uninhibited self-expression and creative joy.",
+    },
+    {
+      id: "p-23",
+      title: "Halloween Pumpkin Quest",
+      category: "Stage & Events",
+      image: "/schoolimages/halloween-pumpkin-boy.jpg",
+      alt: "Young boy with witch hat and pumpkin candy bucket in spooky photobooth",
+      description: "Exciting sensory games and trick-or-treat excitement in a caring, festive atmosphere.",
+    },
+    {
+      id: "p-24",
+      title: "Janmashtami Laddu Gopal Puja",
+      category: "Festivals",
+      image: "/schoolimages/janmashtami-laddu-gopal-puja.jpg",
+      alt: "Traditional festive puja setup with decorated swing and floral thali",
+      description: "Cultural values and spiritual traditions honored with devotion, sweet treats, and floral decorations.",
+    },
+    {
+      id: "p-25",
+      title: "Gandhi Jayanti Celebrations",
+      category: "Festivals",
+      image: "/images/gallery/gallery-gandhi-jayanti.jpg",
+      alt: "WEE SPRITES students celebrating Gandhi Jayanti in festive attire with handmade spectacles craft and peace boards",
+      description: "Celebrating the values of truth, harmony, and non-violence through hands-on craft assemblies.",
+    },
+    {
+      id: "p-26",
+      title: "Dussehra & Ramleela Celebration",
+      category: "Festivals",
+      image: "/images/gallery/gallery-dussehra.jpg",
+      alt: "Children dressed in royal traditional costumes celebrating Dussehra at WEE SPRITES Preschool",
+      description: "Joyful celebration of victory of good over evil with dramatic storytelling and vibrant traditional costumes.",
+    },
+    {
+      id: "p-27",
+      title: "Tiger Mask & Animal Craft Day",
+      category: "Creative Arts",
+      image: "/images/gallery/gallery-tiger-craft.jpg",
+      alt: "Young learner proudly showcasing handmade paper tiger masks and autumn art projects",
+      description: "Tactile paper-folding, color blending, and wildlife curiosity training fine motor coordination.",
+    },
+    {
+      id: "p-28",
+      title: "Annual Day 2025–26 Stage Dance",
+      category: "Stage & Events",
+      image: "/images/gallery/gallery-annual-day-stage.jpg",
+      alt: "WEE SPRITES students performing choreographed group dance on Annual Day stage",
+      description: "Building poise, rhythm, teamwork, and confidence under the bright lights of our Annual Day showcase.",
+    },
+    {
+      id: "p-29",
+      title: "Janmashtami Little Krishna",
+      category: "Festivals",
+      image: "/images/gallery/gallery-krishna.jpg",
+      alt: "Young toddler lovingly dressed as Little Krishna with peacock feather crown",
+      description: "Traditional Janmashtami celebrations with butter pot decorations, flute play, and cultural joy.",
+    },
+    {
+      id: "p-30",
       title: "Pink Day & Lotus Flower Art",
       category: "Creative Arts",
       image: "/images/gallery/gallery-pink-lotus.jpg",
       alt: "Child framed inside a handmade giant pink lotus flower celebrating school color day",
-      description: "Color recognition immersion where learners explore chromatic spectrums through vibrant floral crafts.",
+      description: "Sensory color immersion exploring hues of pink through paper sculpting and floral photography.",
     },
     {
-      id: "p-7",
+      id: "p-31",
       title: "Festive Pottery & Clay Modeling",
       category: "Creative Arts",
       image: "/images/gallery/gallery-pottery-craft.jpg",
-      alt: "Student displaying hand-decorated festival clay pots with cotton makhan",
-      description: "Hands-on clay sculpting and tactile sensory engagement developing pincer grasp and 3D perception.",
+      alt: "Learner holding decorated festive clay pot with colorful pom-poms and paint",
+      description: "Tactile clay exploration nurturing sensory development, spatial awareness, and fine-motor dexterity.",
     },
     {
-      id: "p-8",
-      title: "Toddler Sensory Exploration",
+      id: "p-32",
+      title: "Toddler Soft Play & Rocker Time",
       category: "Toddler & Play",
       image: "/images/gallery/gallery-toddler-play.jpg",
-      alt: "Gentle sensory and motor play on clean, colorful mats at Day Care",
-      description: "Safe climbing modules, tactile textures, and soft-landing mats for confident early locomotion.",
+      alt: "Toddler smiling happily on colorful dolphin rocking toy in the indoor playroom",
+      description: "Gross motor coordination and gentle play in a sanitized, soft-cushioned toddler play zone.",
     },
     {
-      id: "p-9",
-      title: "Orange Day Autumn Projects",
+      id: "p-33",
+      title: "Orange Day Harvest & Crafts",
       category: "Creative Arts",
       image: "/images/gallery/gallery-orange-craft.jpg",
-      alt: "Smiling preschool girl with origami carrots and paper animal crafts",
-      description: "Interactive themed craft days integrating botanical awareness, harvest celebration, and scissor play.",
+      alt: "Preschooler surrounded by orange paper crafts, carrots, and lion face cutouts",
+      description: "Color exploration celebrating warmth and nature through autumn harvest craft stations.",
     },
     {
-      id: "p-10",
+      id: "p-34",
       title: "Ramayana Role-Play Dramatics",
       category: "Stage & Events",
       image: "/images/gallery/gallery-ramayana-play.jpg",
-      alt: "Young students acting out epic storytelling with handmade props",
-      description: "Dramatic play and character role-play fostering verbal expression and empathy.",
+      alt: "Children in elaborate royal traditional costumes reenacting epics",
+      description: "Developing public speaking, memory, and cultural reverence through interactive theatrics.",
     },
     {
-      id: "p-11",
+      id: "p-35",
       title: "Festive Group Ensemble",
       category: "Festivals",
       image: "/images/gallery/gallery-1.jpg",
-      alt: "Children in cultural festive attire participating in celebrations",
-      description: "A celebration of diversity and shared joy across all cultural holidays.",
+      alt: "Children and teachers gathered in traditional attire celebrating festival together",
+      description: "Community, bonding, and warmth celebrating our shared cultural heritage.",
     },
     {
-      id: "p-12",
+      id: "p-36",
       title: "Folk Dance & Rhythm Circle",
       category: "Stage & Events",
       image: "/images/gallery/gallery-2.jpg",
-      alt: "Preschoolers practicing traditional group dance routines",
-      description: "Developing gross motor agility, physical stamina, and spatial awareness through music.",
+      alt: "Preschoolers clapping and dancing in a rhythmic circle",
+      description: "Rhythm, beat, and musical expression integrated into everyday joyful movement.",
     },
     {
-      id: "p-13",
+      id: "p-37",
       title: "Easel Painting & Color Blending",
       category: "Creative Arts",
       image: "/images/gallery/gallery-3.jpg",
-      alt: "Child painting vibrant strokes on an art easel",
-      description: "Encouraging spontaneous self-expression with non-toxic washable acrylics and wide brushes.",
+      alt: "Children painting with finger paints and brushes at outdoor wooden easels",
+      description: "Freeform self-expression and chromatic exploration on outdoor easels.",
     },
     {
-      id: "p-14",
+      id: "p-38",
       title: "Origami & Paper Sculpting",
       category: "Creative Arts",
       image: "/images/gallery/gallery-4.jpg",
-      alt: "Learners cutting, pasting and folding paper craft objects",
-      description: "Fine motor precision, bilateral hand coordination, and geometric appreciation through craft.",
+      alt: "Child carefully folding colorful paper sheets during fine motor activity",
+      description: "Patience, geometric discovery, and dexterity trained through folding crafts.",
     },
     {
-      id: "p-15",
-      title: "Theatrical Skit & Rhyme enactment",
+      id: "p-39",
+      title: "Theatrical Skit & Rhyme Enactment",
       category: "Stage & Events",
       image: "/images/gallery/gallery-5.jpg",
-      alt: "Stage performance with vibrant backdrop and costumed children",
-      description: "Costumed stage productions where every child has an opportunity to shine with dialogue and dance.",
+      alt: "Preschoolers performing nursery rhyme role play with animal hand puppets",
+      description: "Expressive language development and stage presence through dramatic rhymes.",
     },
     {
-      id: "p-16",
+      id: "p-40",
       title: "Graduation Day Felicitations",
       category: "Stage & Events",
       image: "/images/gallery/gallery-6.jpg",
-      alt: "Graduation ceremony celebrating primary school readiness",
-      description: "Honoring our UKG graduates as they transition confidently to premier formal primary schools.",
+      alt: "Proud UKG graduates wearing graduation caps and holding diplomas",
+      description: "Celebrating our little graduates as they take their confident next steps toward formal school.",
     },
     {
-      id: "p-17",
+      id: "p-41",
       title: "Award & Achievement Day",
       category: "Stage & Events",
       image: "/images/gallery/gallery-7.jpg",
-      alt: "Students holding achievement certificates on stage",
-      description: "Celebrating kindness, participation, and individual milestones with pride.",
+      alt: "Students receiving medals and certificates of merit with proud smiles",
+      description: "Recognizing effort, kindness, sportsmanship, and creativity across all age groups.",
     },
     {
-      id: "p-18",
+      id: "p-42",
       title: "Confidence in Public Speaking",
       category: "Stage & Events",
       image: "/images/gallery/gallery-8.jpg",
-      alt: "Young learner holding a stage microphone with a bright smile",
-      description: "Regular show-and-tell assemblies banish stage fright from an early age.",
+      alt: "Little student speaking into a microphone with confidence during morning assembly",
+      description: "Fostering fearless self-expression from the very earliest stages of preschool.",
     },
     {
-      id: "p-19",
-      title: "Montessori Wooden Blocks & Puzzles",
+      id: "p-43",
+      title: "Wooden Blocks & Sensory Puzzles",
       category: "Classroom",
       image: "/images/gallery/gallery-9.jpg",
-      alt: "Child building intricate towers with Montessori wooden blocks",
-      description: "Autonomous spatial problem-solving using tactile, eco-friendly wooden materials.",
+      alt: "Preschoolers collaborating to build architectural structures with wooden blocks",
+      description: "Spatial reasoning, architectural balance, and collaborative problem-solving.",
     },
     {
-      id: "p-20",
+      id: "p-44",
       title: "Phonics Sound Basket Discovery",
       category: "Classroom",
       image: "/images/gallery/gallery-10.jpg",
-      alt: "Children matching letter flashcards with tangible objects",
-      description: "Multi-sensory Jolly Phonics associations connecting phoneme sounds to everyday items.",
+      alt: "Children identifying phonetic objects and sound baskets with their teacher",
+      description: "Multi-sensory phonics foundational practice building fluent phonetic awareness.",
     },
     {
-      id: "p-21",
+      id: "p-45",
       title: "Interactive Storytelling Circle",
       category: "Classroom",
       image: "/images/gallery/gallery-11.jpg",
-      alt: "Teacher reading an illustrated picture book in circle time",
-      description: "Fostering language comprehension, listening stamina, and imaginative visualization.",
+      alt: "Teacher sharing illustrated big book story with engaged children sitting on floor mat",
+      description: "Sparking imagination, vocabulary expansion, and attentive listening habits.",
     },
     {
-      id: "p-22",
+      id: "p-46",
       title: "Math Manipulatives & Bead Counting",
       category: "Classroom",
       image: "/images/gallery/gallery-12.jpg",
-      alt: "Learner arranging colorful counting beads on number pegs",
-      description: "Hands-on quantification, one-to-one correspondence, and pattern sequencing.",
+      alt: "Young learner sorting colored counting beads on wooden pegboards",
+      description: "Concrete mathematical foundations through tactile sorting, grouping, and pattern identification.",
     },
     {
-      id: "p-23",
+      id: "p-47",
+      title: "Tactile Sensory Sand Tracing",
+      category: "Classroom",
+      image: "/images/gallery/gallery-13.jpg",
+      alt: "Children tracing alphabet shapes into colored sensory sand trays",
+      description: "Sensory handwriting readiness connecting muscular memory with tactile texture.",
+    },
+    {
+      id: "p-48",
       title: "Indoor Soft Play Ball Pool",
       category: "Toddler & Play",
       image: "/images/gallery/gallery-14.jpg",
-      alt: "Toddlers diving and laughing inside a sanitized ball pool",
-      description: "Safe, cushioned physical stimulation that inspires laughter and carefree motor movement.",
+      alt: "Children laughing happily inside the colorful indoor ball pool",
+      description: "Sensory proprioceptive stimulation and pure laughter in our cushioned ball pool.",
     },
     {
-      id: "p-24",
+      id: "p-49",
       title: "Outdoor Lawn Obstacle Fun",
       category: "Toddler & Play",
       image: "/images/gallery/gallery-15.jpg",
-      alt: "Children running and balancing on outdoor obstacle ramp modules",
-      description: "Sunlit gross motor games that build strong posture, stamina, and cardiovascular fitness.",
+      alt: "Toddlers navigating soft hurdles and balance beams on outdoor turf",
+      description: "Gross motor coordination, balance, and energetic outdoor physical fitness.",
+    },
+    {
+      id: "p-50",
+      title: "Colorful Building Blocks Tower",
+      category: "Classroom",
+      image: "/images/gallery/gallery-16.jpg",
+      alt: "Young learners balancing vibrant blocks and geometry towers together",
+      description: "Constructive play, color matching, and cooperative teamwork in early childhood.",
+    },
+    {
+      id: "p-51",
+      title: "Clay Sculpting & Sensory Modeling",
+      category: "Creative Arts",
+      image: "/images/gallery/gallery-17.jpg",
+      alt: "Student molding colorful dough into animals and organic forms",
+      description: "Tactile pressure, hand strength, and imaginative expression through modeling clay.",
+    },
+    {
+      id: "p-52",
+      title: "Morning Exercise & Fitness Drills",
+      category: "Toddler & Play",
+      image: "/images/gallery/gallery-18.jpg",
+      alt: "Preschoolers warming up with morning stretching exercises in fresh air",
+      description: "Building physical agility, core stamina, and lifelong wellness habits.",
+    },
+    {
+      id: "p-53",
+      title: "Rhyme Time & Group Singalong",
+      category: "Stage & Events",
+      image: "/images/gallery/gallery-19.jpg",
+      alt: "Children singing classic action rhymes with joyful hand movements",
+      description: "Musical ear training, auditory memory, and enthusiastic community singing.",
+    },
+    {
+      id: "p-54",
+      title: "Dramatic Play & Costume Corner",
+      category: "Stage & Events",
+      image: "/images/gallery/gallery-20.jpg",
+      alt: "Young learners exploring themed dramatic costumes and imaginative play",
+      description: "Empathy, perspective-taking, and expressive role-playing in our costume corner.",
+    },
+    {
+      id: "p-55",
+      title: "Science Sensory Discovery Tray",
+      category: "Classroom",
+      image: "/images/gallery/gallery-21.jpg",
+      alt: "Children examining natural leaves, seeds, and water droppers on discovery tray",
+      description: "Observational science, curious inquiry, and gentle nature-based experiments.",
+    },
+    {
+      id: "p-56",
+      title: "Puzzle Solving & Pattern Matching",
+      category: "Classroom",
+      image: "/images/gallery/gallery-22.jpg",
+      alt: "Toddler placing interlocking jigsaw pieces into wooden frame",
+      description: "Critical thinking, shape recognition, and cognitive persistence through puzzles.",
+    },
+    {
+      id: "p-57",
+      title: "Finger Painting & Brushwork",
+      category: "Creative Arts",
+      image: "/images/gallery/gallery-23.jpg",
+      alt: "Child exploring vibrant washable paints with finger prints and brush strokes",
+      description: "Sensory release, emotional regulation, and joyful chromatic experiments.",
+    },
+    {
+      id: "p-58",
+      title: "Friendship Day Handprint Tree",
+      category: "Creative Arts",
+      image: "/images/gallery/gallery-24.jpg",
+      alt: "Collaborative mural made with colorful student handprints forming a flourishing tree",
+      description: "Celebrating kindness, unity, and friendship through collaborative mural art.",
     },
   ];
 
@@ -342,19 +614,11 @@ export function GalleryView() {
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                     />
 
-                    {/* Gradient overlay on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-violet-dark/90 via-brand-violet-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white text-left">
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="text-[10px] font-black uppercase tracking-wider text-brand-yellow px-2 py-0.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-                          {photo.category}
-                        </span>
-                        <div className="w-7 h-7 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
-                          <ZoomIn className="w-3.5 h-3.5" />
-                        </div>
+                    {/* Hover overlay with zoom icon only (no text overlay) */}
+                    <div className="absolute inset-0 bg-brand-violet-dark/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="w-11 h-11 rounded-full bg-white/95 text-brand-violet shadow-lg backdrop-blur-sm flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                        <ZoomIn className="w-5 h-5" />
                       </div>
-                      <h3 className="text-xs sm:text-sm font-extrabold text-white leading-snug">
-                        {photo.title}
-                      </h3>
                     </div>
                   </div>
                 </Reveal>
@@ -436,7 +700,7 @@ export function GalleryView() {
 
             <Reveal delay={0.25}>
               <p className="text-sm sm:text-base md:text-lg text-white/85 max-w-2xl mx-auto leading-relaxed">
-                Step inside our vibrant campus, watch our happy learners discover and laugh, and see why WEE SPRITES is the benchmark in early childhood nurture.
+                We care, we share, for the future, we prepare. Step inside our vibrant campus, watch children discover and laugh, and see why WEE SPRITES is the benchmark in early childhood nurture.
               </p>
             </Reveal>
 
@@ -510,33 +774,16 @@ export function GalleryView() {
 
           {/* Main Card */}
           <div
-            className="relative max-w-2xl w-full bg-brand-violet-dark rounded-3xl overflow-hidden shadow-2xl border border-white/20 text-white max-h-[92vh] overflow-y-auto"
+            className="relative max-w-4xl w-full max-h-[92vh] flex items-center justify-center p-2 sm:p-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative aspect-square sm:aspect-[4/3] w-full bg-black">
+            <div className="relative w-full aspect-square sm:aspect-[4/3] md:aspect-[16/10] max-h-[88vh] rounded-3xl overflow-hidden shadow-2xl border border-white/20 bg-black/95 flex items-center justify-center">
               <Image
                 src={activePhoto.image}
                 alt={activePhoto.alt}
                 fill
                 className="object-contain"
               />
-            </div>
-
-            <div className="p-4 sm:p-6 text-left space-y-1.5">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-black uppercase text-brand-yellow tracking-wider">
-                  {activePhoto.category}
-                </span>
-                <span className="text-xs text-white/60">
-                  {currentIndex + 1} of {galleryPhotos.length}
-                </span>
-              </div>
-              <h3 className="text-lg sm:text-xl font-black text-white">
-                {activePhoto.title}
-              </h3>
-              <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
-                {activePhoto.description}
-              </p>
             </div>
           </div>
         </div>

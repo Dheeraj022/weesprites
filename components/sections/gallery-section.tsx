@@ -89,20 +89,10 @@ export function GallerySection() {
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 />
 
-                {/* Hover overlay with title & zoom icon */}
-                <div className="absolute inset-0 bg-brand-violet-dark/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3 text-white">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-[10px] uppercase font-bold text-brand-yellow tracking-wider">
-                        {item.category}
-                      </p>
-                      <h4 className="text-xs font-black leading-tight mt-0.5 text-white">
-                        {item.title}
-                      </h4>
-                    </div>
-                    <div className="w-7 h-7 rounded-full bg-white/25 backdrop-blur-sm flex items-center justify-center text-white shrink-0 ml-1.5">
-                      <ZoomIn className="w-3.5 h-3.5" />
-                    </div>
+                {/* Hover overlay with zoom icon only (no text overlay) */}
+                <div className="absolute inset-0 bg-brand-violet-dark/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-white/95 text-brand-violet shadow-lg backdrop-blur-sm flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                    <ZoomIn className="w-5 h-5" />
                   </div>
                 </div>
               </div>
@@ -111,92 +101,61 @@ export function GallerySection() {
         </div>
       </div>
 
-      {/* Lightbox Modal */}
+      {/* Lightbox Modal - Pure image viewer without text */}
       {activePhoto && (
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md animate-fadeIn"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-brand-violet-dark/85 backdrop-blur-md animate-fadeIn"
           onClick={closeLightbox}
         >
+          {/* Close Button */}
+          <button
+            type="button"
+            onClick={closeLightbox}
+            aria-label="Close photo preview"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-11 h-11 rounded-full bg-white/15 hover:bg-white text-white hover:text-text-primary flex items-center justify-center transition-colors z-20"
+          >
+            <X className="w-6 h-6" />
+          </button>
+
+          {/* Prev button */}
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              showPrev();
+            }}
+            aria-label="Previous photo"
+            className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/15 hover:bg-white text-white hover:text-text-primary flex items-center justify-center transition-colors z-20"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+
+          {/* Next button */}
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              showNext();
+            }}
+            aria-label="Next photo"
+            className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/15 hover:bg-white text-white hover:text-text-primary flex items-center justify-center transition-colors z-20"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Main Image Container - Images only, no text */}
           <div
-            className="relative max-w-4xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh]"
+            className="relative max-w-4xl w-full max-h-[92vh] flex items-center justify-center p-2"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Modal Header */}
-            <div className="flex items-center justify-between px-5 py-3.5 bg-brand-cream/80 border-b border-border-soft">
-              <div>
-                <span className="text-xs font-bold uppercase text-brand-violet tracking-wider">
-                  {activePhoto.category} • Photo {currentIndex + 1} of {galleryContent.items.length}
-                </span>
-                <h3 className="text-base sm:text-lg font-extrabold text-text-primary">
-                  {activePhoto.title}
-                </h3>
-              </div>
-              <button
-                type="button"
-                onClick={closeLightbox}
-                aria-label="Close photo preview"
-                className="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center text-text-body hover:bg-brand-violet hover:text-white transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            {/* Main Image with Navigation Arrows */}
-            <div className="relative flex-1 bg-black/90 flex items-center justify-center min-h-[300px] sm:min-h-[460px] overflow-hidden group">
+            <div className="relative w-full aspect-square sm:aspect-[4/3] md:aspect-[16/10] max-h-[85vh] rounded-3xl overflow-hidden shadow-2xl border border-white/20 bg-black/95 flex items-center justify-center">
               <img
                 src={activePhoto.image}
                 alt={activePhoto.alt}
-                className="max-h-[62vh] w-auto max-w-full object-contain mx-auto"
+                className="w-full h-full object-contain"
               />
-
-              {/* Prev / Next Buttons */}
-              <button
-                type="button"
-                onClick={showPrev}
-                aria-label="Previous photo"
-                className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-brand-violet shadow-md flex items-center justify-center transition-all hover:scale-110"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-
-              <button
-                type="button"
-                onClick={showNext}
-                aria-label="Next photo"
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-brand-violet shadow-md flex items-center justify-center transition-all hover:scale-110"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </div>
-
-            {/* Caption & Thumbnail strip */}
-            <div className="p-3 sm:p-4 bg-white border-t border-border-soft flex flex-col gap-2.5">
-              <p className="text-xs sm:text-sm text-text-body">
-                {activePhoto.alt}
-              </p>
-
-              {/* Thumbnail Strip */}
-              <div className="flex items-center gap-2 overflow-x-auto py-1 scrollbar-thin">
-                {galleryContent.items.map((item, idx) => (
-                  <button
-                    key={item.id}
-                    onClick={() => setActivePhoto(item)}
-                    className={`relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border-2 transition-all ${
-                      idx === currentIndex
-                        ? "border-brand-violet scale-105 shadow-sm"
-                        : "border-transparent opacity-60 hover:opacity-100"
-                    }`}
-                  >
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
             </div>
           </div>
         </div>

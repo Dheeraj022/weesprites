@@ -16,6 +16,7 @@ import { FaqSection } from "@/components/sections/faq-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { SiteFooter } from "@/components/site-footer";
 import { EnquiryModal } from "@/components/ui/enquiry-modal";
+import { FranchisePopup } from "@/components/ui/franchise-popup";
 
 export function HomeView() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -78,6 +79,9 @@ export function HomeView() {
         onClose={() => setModalOpen(false)}
         defaultTab={enquiryTab}
       />
+
+      {/* Franchise Enquiry Popup (appears after 2s on homepage) */}
+      <FranchisePopup />
     </div>
   );
 }

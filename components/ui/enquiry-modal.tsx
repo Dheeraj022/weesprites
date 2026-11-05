@@ -267,12 +267,13 @@ export function EnquiryModal({
                     className="w-full px-3 py-2 text-sm border border-border-soft rounded-xl focus:border-brand-violet focus:ring-1 focus:ring-brand-violet outline-none bg-white"
                   >
                     <option value="" disabled>Select Program</option>
-                    <option value="Play Group">Play Group (1.5 - 2.5 yrs)</option>
-                    <option value="Pre-Nursery">Pre-Nursery (2.5 - 3.5 yrs)</option>
-                    <option value="Nursery">Nursery (3.5 - 4.5 yrs)</option>
-                    <option value="LKG">LKG (4.5 - 5.5 yrs)</option>
-                    <option value="UKG">UKG (5.5 - 6.5 yrs)</option>
-                    <option value="Evening Program">Evening Program (2 - 10 yrs)</option>
+                    <option value="Toddler Group">Toddler Group (18 Months+)</option>
+                    <option value="Pre-Nursery">Pre-Nursery (2+ Years)</option>
+                    <option value="Nursery">Nursery (3–4 Years)</option>
+                    <option value="LKG">LKG (4–5 Years)</option>
+                    <option value="UKG">UKG (5–6 Years)</option>
+                    <option value="Evening Program">Evening Program (2.5–12 Years)</option>
+                    <option value="Day Care">Day Care (12 Months+)</option>
                   </select>
                   {errorsAdmissions.program && (
                     <p className="text-xs text-red-600 mt-1">{errorsAdmissions.program.message}</p>

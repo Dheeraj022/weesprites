@@ -25,7 +25,7 @@ export function SiteFooter() {
               </div>
             </div>
             <p className="text-sm text-white/80 leading-relaxed max-w-sm">
-              A nurturing place where children learn, play and grow with confidence. Built with child safety, joy, and holistic development at heart.
+              We care, we share, for the future, we prepare. A nurturing sanctuary where children learn, play, and grow with confidence.
             </p>
             <div className="flex items-center gap-3 pt-2">
               <a
@@ -74,6 +74,14 @@ export function SiteFooter() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-brand-yellow transition-colors block py-0.5"
+                >
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
 

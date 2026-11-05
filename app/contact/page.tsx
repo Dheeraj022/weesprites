@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/facility-classrooms.jpg",
+        url: "/schoolimages/raincoat-umbrella-boy.jpg",
         width: 1200,
         height: 630,
-        alt: "Bright modern Montessori classroom at WEE SPRITES Preschool New Delhi campus",
+        alt: "Happy preschooler exploring rainy day themed learning at WEE SPRITES Preschool",
       },
     ],
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "Contact Us & Campus Directions | WEE SPRITES",
     description:
       "Reach out to our admissions desk or schedule a visit to our New Delhi campus.",
-    images: ["/images/facility-classrooms.jpg"],
+    images: ["/schoolimages/raincoat-umbrella-boy.jpg"],
   },
 };
 

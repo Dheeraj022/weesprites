@@ -40,7 +40,7 @@ export function FacilitiesSection() {
                     alt={facility.title}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                    className={`object-cover ${facility.objectPosition || "object-top"} transition-transform duration-700 ease-out group-hover:scale-105`}
                   />
                 </div>
 

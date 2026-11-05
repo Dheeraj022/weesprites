@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/why-choose-child.jpg",
+        url: "/schoolimages/sports-day-wee-sprites-uniform.jpg",
         width: 1200,
         height: 630,
         alt: "Joyful, confident child exploring playful early education at WEE SPRITES Preschool",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "School Policies & Terms of Enrolment | WEE SPRITES",
     description:
       "Transparent governance, health regulations, safety protocols, and parent partnership guidelines.",
-    images: ["/images/why-choose-child.jpg"],
+    images: ["/schoolimages/sports-day-wee-sprites-uniform.jpg"],
   },
 };
 

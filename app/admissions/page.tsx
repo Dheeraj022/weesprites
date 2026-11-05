@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/admissions-child.jpg",
+        url: "/schoolimages/preschool-uniform-thumbs-up.jpg",
         width: 1200,
         height: 630,
-        alt: "Excited young child ready for playful learning at WEE SPRITES Preschool",
+        alt: "Excited young child in school uniform ready for playful learning at WEE SPRITES Preschool",
       },
     ],
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "Admissions 2026–2027 | WEE SPRITES Preschool",
     description:
       "Join the WEE SPRITES family. Enrolment criteria, application checklist, and schedule a personalized campus tour.",
-    images: ["/images/admissions-child.jpg"],
+    images: ["/schoolimages/preschool-uniform-thumbs-up.jpg"],
   },
 };
 

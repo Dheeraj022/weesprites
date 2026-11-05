@@ -4,7 +4,7 @@ import { FranchiseView } from "@/components/franchise/franchise-view";
 export const metadata: Metadata = {
   title: "Preschool Franchise Opportunity | Partner with WEE SPRITES",
   description:
-    "Partner with WEE SPRITES to build a highly rewarding, profitable early childhood center. 360° setup support, Montessori pedagogy, teacher recruitment, and fast return on investment.",
+    "Partner with WEE SPRITES to build a highly rewarding, profitable early childhood center. 360° setup support, child-centric curriculum, educator training, and fast return on investment.",
   alternates: {
     canonical: "/franchise",
   },
@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/hero-franchise.jpg",
+        url: "/schoolimages/festival-gift-distribution.jpg",
         width: 1200,
         height: 630,
-        alt: "Successful preschool franchise leadership and smiling preschool child at WEE SPRITES",
+        alt: "WEE SPRITES educators and students celebrating together at campus ceremony",
       },
     ],
   },
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Preschool Franchise Opportunity | WEE SPRITES",
     description:
-      "Build a world-class preschool in your city with complete setup guidance and pedagogical mentorship.",
-    images: ["/images/hero-franchise.jpg"],
+      "Build a world-class preschool in your city with complete setup guidance and operational mentorship.",
+    images: ["/schoolimages/festival-gift-distribution.jpg"],
   },
 };
 

@@ -45,8 +45,8 @@ export function SitemapView() {
       icon: <Home className="w-5 h-5 text-brand-violet" />,
       links: [
         { name: "Home", href: "/", desc: "Homepage overview, trust pillars, curriculum snapshot, and parent reviews." },
-        { name: "About Us", href: "/about", desc: "Our philosophy, founding story, Montessori vision, and educator team." },
-        { name: "Programs", href: "/programs", desc: "Age-aligned curriculum breakdown from 1.5 to 6.5 years." },
+        { name: "About Us", href: "/about", desc: "Our philosophy, founding story, early years vision, and educator team." },
+        { name: "Programs", href: "/programs", desc: "Age-aligned curriculum breakdown from Toddler Group to UKG & Day Care." },
         { name: "Admissions", href: "/admissions", desc: "Admissions criteria, 4-step registration, documents checklist, and form." },
         { name: "Franchise Opportunity", href: "/franchise", desc: "Comprehensive business opportunity, unit economics, and partnership enquiry." },
         { name: "Gallery & Events", href: "/gallery", desc: "24-photo interactive showcase of festivals, annual day dances, and arts." },
@@ -55,15 +55,16 @@ export function SitemapView() {
     },
     {
       title: "Academic Curriculum & Programs",
-      description: "Montessori-inspired, developmental stages for toddlers & preschoolers.",
+      description: "Child-centric, developmental stages for toddlers & preschoolers.",
       icon: <GraduationCap className="w-5 h-5 text-brand-violet" />,
       links: [
-        { name: "Play Group (1.5 – 2.5 yrs)", href: "/programs#playgroup", desc: "Sensory exploration, gentle separation confidence, and early vocabulary." },
-        { name: "Pre-Nursery (2.5 – 3.5 yrs)", href: "/programs#prenursery", desc: "Fine-motor grasping, cooperative play, and language immersion." },
-        { name: "Nursery (3.5 – 4.5 yrs)", href: "/programs#nursery", desc: "Phonetic sounds, foundational numeracy, and expressive arts." },
-        { name: "Lower KG / LKG (4.5 – 5.5 yrs)", href: "/programs#lkg", desc: "Early reading, structured handwriting, and scientific inquiry." },
-        { name: "Upper KG / UKG (5.5 – 6.5 yrs)", href: "/programs#ukg", desc: "Formal primary school transition readiness and leadership projects." },
-        { name: "Evening Day Care (1.5 – 10 yrs)", href: "/programs#evening", desc: "Flexible after-school nurture, supervised homework, and hobby clubs." },
+        { name: "Toddler Group (18 Months+)", href: "/programs#toddler-group", desc: "Sensory exploration, gentle separation confidence, and early vocabulary." },
+        { name: "Pre-Nursery (2+ Years)", href: "/programs#prenursery", desc: "Fine-motor grasping, cooperative play, and language immersion." },
+        { name: "Nursery (3–4 Years)", href: "/programs#nursery", desc: "Phonetic sounds, foundational numeracy, and expressive arts." },
+        { name: "LKG (4–5 Years)", href: "/programs#lkg", desc: "Early reading, structured handwriting, and scientific inquiry." },
+        { name: "UKG (5–6 Years)", href: "/programs#ukg", desc: "Formal primary school transition readiness and leadership projects." },
+        { name: "Evening Program (2.5–12 Years)", href: "/programs#evening", desc: "Creative arts, supervised homework, and guided hobby clubs." },
+        { name: "Day Care (12 Months+)", href: "/programs#day-care", desc: "Safe, nurturing daylong sanctuary operating 8:00 AM to 8:00 PM." },
       ],
     },
     {
@@ -204,7 +205,7 @@ export function SitemapView() {
                     Our Admissions Team is Happy to Assist You
                   </h3>
                   <p className="text-sm text-white/85 max-w-xl mx-auto leading-relaxed">
-                    Call our direct campus hotline or schedule a personalized campus tour to experience our Montessori learning zones in person.
+                    Call our direct campus hotline or schedule a personalized campus tour to experience our vibrant learning zones in person.
                   </p>
                   <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2">
                     <button

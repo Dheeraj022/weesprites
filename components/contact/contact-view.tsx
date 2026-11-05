@@ -112,32 +112,6 @@ export function ContactView() {
     },
   ];
 
-  const departments = [
-    {
-      dept: "Admissions & Counseling",
-      desc: "For enrollment queries, fee structures, age cut-offs, and trial classes.",
-      contact: siteConfig.phone,
-      email: "admissions@weesprites.com",
-    },
-    {
-      dept: "Franchise Development",
-      desc: "For edupreneurs interested in opening a WEE SPRITES preschool in their city.",
-      contact: siteConfig.phone,
-      email: "franchise@weesprites.com",
-    },
-    {
-      dept: "Day Care & After-School Club",
-      desc: "For toddler evening care, working parent schedules, and holiday camps.",
-      contact: siteConfig.phone,
-      email: "daycare@weesprites.com",
-    },
-    {
-      dept: "Careers & Faculty Recruitment",
-      desc: "For passionate certified early childhood educators and care assistants.",
-      contact: siteConfig.phone,
-      email: "careers@weesprites.com",
-    },
-  ];
 
   return (
     <div className="min-h-screen flex flex-col bg-white text-text-body selection:bg-brand-lilac selection:text-brand-violet-dark overflow-x-clip">
@@ -480,46 +454,6 @@ export function ContactView() {
                   </div>
                 </Reveal>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 5. Departmental Helplines Directory */}
-        <section className="py-16 md:py-24 bg-white relative">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <Reveal delay={0.05}>
-                <span className="text-xs md:text-sm font-extrabold uppercase tracking-wider text-brand-violet">
-                  DEPARTMENT DIRECTORY
-                </span>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-text-primary mt-2">
-                  Connect with the Right Team
-                </h2>
-                <p className="mt-3 text-sm md:text-base text-text-body">
-                  Direct lines and emails to help you reach the appropriate department without delays.
-                </p>
-              </Reveal>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
-              {departments.map((dept, idx) => (
-                <Reveal key={dept.dept} delay={0.08 + idx * 0.08}>
-                  <div className="p-6 rounded-3xl bg-brand-cream/40 border border-border-soft hover:shadow-floating hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full">
-                    <h3 className="text-base font-black text-text-primary mb-2">
-                      {dept.dept}
-                    </h3>
-                    <p className="text-xs text-text-body leading-relaxed flex-1 mb-4">
-                      {dept.desc}
-                    </p>
-                    <div className="pt-2 border-t border-border-soft space-y-1 text-xs">
-                      <div className="font-bold text-brand-violet">{dept.contact}</div>
-                      <a href={`mailto:${dept.email}`} className="text-text-muted hover:text-brand-violet transition-colors block truncate">
-                        {dept.email}
-                      </a>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
             </div>
           </div>
         </section>

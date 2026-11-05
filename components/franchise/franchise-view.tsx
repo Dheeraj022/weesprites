@@ -94,13 +94,13 @@ export function FranchiseView() {
   const supportPillars = [
     {
       icon: <Building className="w-6 h-6 text-brand-violet" />,
-      title: "Campus Design & 3D Interior Layouts",
-      desc: "Complete architectural blueprints, Vaastu-compliant layouts, child-safe rubber flooring, non-toxic wall art, and indoor soft-play equipment design.",
+      title: "3D Interior Layouts & Infrastructure Guidance",
+      desc: "Comprehensive architectural recommendations, child-safe rubber flooring guidelines, non-toxic wall finishes, and indoor soft-play setup advisory.",
     },
     {
       icon: <BookOpen className="w-6 h-6 text-brand-yellow-dark" />,
-      title: "Proprietary Montessori Curriculum",
-      desc: "Ready-to-teach daily lesson plans, student workbooks, audio-visual smart classroom assets, and continuous pedagogical upgrades.",
+      title: "Proprietary Early Years Curriculum",
+      desc: "Ready-to-teach daily lesson plans, student workbooks, interactive learning resources, and continuous curriculum enhancements.",
     },
     {
       icon: <Users className="w-6 h-6 text-emerald-600" />,
@@ -109,8 +109,8 @@ export function FranchiseView() {
     },
     {
       icon: <Megaphone className="w-6 h-6 text-rose-600" />,
-      title: "360° Admission Marketing Engine",
-      desc: "Hyperlocal digital ads (Meta & Google), automated lead generation, outdoor branding hoardings, print flyers, and high-impact launch event strategy.",
+      title: "Comprehensive Marketing & Admission Guidance",
+      desc: "Strategic marketing advisory, professionally designed brand assets, launch event roadmaps, and proven local outreach recommendations to build your admissions pipeline.",
     },
     {
       icon: <Layers className="w-6 h-6 text-sky-600" />,
@@ -129,24 +129,24 @@ export function FranchiseView() {
     { step: "02", title: "Site Selection & Catchment Feasibility", desc: "Demographic study of catchment area, footfall analysis, and lease agreement guidance." },
     { step: "03", title: "Franchise Agreement & 3D Blueprints", desc: "Formal signing, territorial lock, and delivery of turnkey interior and exterior architectural designs." },
     { step: "04", title: "Turnkey Setup & Educator Training", desc: "Procurement of furniture, play materials, and intensive faculty certification workshops." },
-    { step: "05", title: "Grand Opening & Admission Launch", desc: "High-impact opening campaign, digital ads activation, and welcoming your inaugural batch of learners." },
+    { step: "05", title: "Grand Opening & Admission Launch", desc: "Coordinated launch event roadmap, local outreach guidance, and welcoming your inaugural batch of learners." },
   ];
 
   const models = [
     {
-      name: "Standard Center",
-      space: "2,000 – 2,500 Sq. Ft.",
+      name: "Standard Centre",
+      space: "2,000 sq. ft.",
       capacity: "60 – 80 Students",
       desc: "Ideal for residential neighborhoods, colonies, and emerging suburban hubs.",
-      highlights: ["Preschool programs (Play Group to UKG)", "Standard indoor play zone", "Estimated Break-Even: 12-14 Months"],
+      highlights: ["Preschool programs (Toddler Group to UKG)", "Standard indoor play zone", "Estimated Break-Even: 12-14 Months"],
       tag: "Popular Choice",
     },
     {
-      name: "Flagship / Model Campus",
-      space: "3,000 – 5,000+ Sq. Ft.",
+      name: "Flagship Model",
+      space: "3,000–5,000 sq. ft.",
       capacity: "120 – 160+ Students",
-      desc: "Prime standalone villa or commercial bungalow with extensive outdoor play and extended day care.",
-      highlights: ["Full Preschool + Day Care & Evening Hobby Club", "Premium sensory discovery & ball pool arena", "High revenue density per square foot"],
+      desc: "Prime standalone villa or commercial bungalow with extensive play areas and extended day care.",
+      highlights: ["Full Preschool + Day Care & Evening Program", "Premium sensory discovery & activity arena", "High revenue density per square foot"],
       tag: "Highest Revenue",
     },
   ];
@@ -166,11 +166,11 @@ export function FranchiseView() {
     },
     {
       q: "Can we offer Day Care and Evening Care programs at our center?",
-      a: "Yes, absolutely! In fact, we actively encourage it. Combining morning preschool (Play Group to UKG) with afternoon Day Care and evening enrichment clubs creates dual recurring revenue streams that dramatically boost your bottom-line profitability.",
+      a: "Yes, absolutely! In fact, we actively encourage it. Combining morning preschool (Toddler Group to UKG) with afternoon Day Care and evening enrichment clubs creates dual recurring revenue streams that dramatically boost your bottom-line profitability.",
     },
     {
       q: "What marketing support is provided for student admissions?",
-      a: "We run centralized, hyper-local digital campaigns (Google Ads, Facebook, Instagram) targeting families with young children in your immediate 3–5 km radius. We also provide customized print collateral, banners, brochures, and launch event roadmaps.",
+      a: "We provide comprehensive marketing guidance, approved brand collateral templates, social media content kits, and structured launch event roadmaps to help you effectively reach prospective parents in your community.",
     },
   ];
 
@@ -213,7 +213,7 @@ export function FranchiseView() {
 
                 <Reveal delay={0.25}>
                   <p className="text-base sm:text-lg text-text-body leading-relaxed max-w-2xl">
-                    Partner with <strong>WEE SPRITES Preschool & Day Care</strong> to build a highly rewarding, socially impactful, and financially profitable early education business. Benefit from our proven Montessori curriculum, 360° turnkey setup, intensive educator training, and powerful student admission marketing engine.
+                    Partner with <strong>WEE SPRITES Preschool & Day Care</strong> to build a highly rewarding, socially impactful, and financially profitable early education business. Benefit from our proven child-centric curriculum, 360° turnkey setup, intensive educator training, and strategic admission marketing guidance.
                   </p>
                 </Reveal>
 
@@ -240,8 +240,8 @@ export function FranchiseView() {
                 <Reveal delay={0.2}>
                   <div className="relative w-full max-w-[380px] sm:max-w-[440px]">
                     <CurvedPhoto
-                      src="/images/hero-franchise.jpg"
-                      alt="Successful preschool leadership and happy child at WEE SPRITES"
+                      src="/schoolimages/festival-gift-distribution.jpg"
+                      alt="WEE SPRITES educators and students celebrating together at campus ceremony"
                       variant="blob2"
                       offsetBg="yellow"
                       aspectRatio="4/3"
@@ -295,8 +295,8 @@ export function FranchiseView() {
                 <Reveal delay={0.1}>
                   <div className="relative w-full max-w-[340px] sm:max-w-[400px]">
                     <CurvedPhoto
-                      src="/images/franchise-child.jpg"
-                      alt="Confident young child with colorful paper airplane representing early growth"
+                      src="/schoolimages/annual-day-stage-educators.jpg"
+                      alt="WEE SPRITES educators and toddlers celebrated on stage during school showcase"
                       variant="blob1"
                       offsetBg="lilac"
                       aspectRatio="square"

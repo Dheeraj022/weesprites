@@ -112,12 +112,13 @@ export function AdmissionsView() {
   ];
 
   const eligibilityCriteria = [
-    { program: "Play Group", age: "1.5 – 2.5 Years", timings: "09:00 AM – 11:30 AM", ratio: "1 : 6" },
-    { program: "Pre-Nursery", age: "2.5 – 3.5 Years", timings: "09:00 AM – 12:00 PM", ratio: "1 : 8" },
-    { program: "Nursery", age: "3.5 – 4.5 Years", timings: "09:00 AM – 12:30 PM", ratio: "1 : 8" },
-    { program: "LKG", age: "4.5 – 5.5 Years", timings: "09:00 AM – 01:00 PM", ratio: "1 : 10" },
-    { program: "UKG", age: "5.5 – 6.5 Years", timings: "09:00 AM – 01:30 PM", ratio: "1 : 10" },
-    { program: "Day Care & Evening Care", age: "2.0 – 10.0 Years", timings: "12:30 PM – 07:00 PM", ratio: "1 : 8" },
+    { program: "Toddler Group", age: "18 Months+", timings: "09:00 AM – 11:30 AM", ratio: "1 : 10" },
+    { program: "Pre-Nursery", age: "2+ Years", timings: "09:00 AM – 12:00 PM", ratio: "1 : 10" },
+    { program: "Nursery", age: "3–4 Years", timings: "09:00 AM – 12:00 PM", ratio: "1 : 10" },
+    { program: "LKG", age: "4–5 Years", timings: "09:00 AM – 12:00 PM", ratio: "1 : 10" },
+    { program: "UKG", age: "5–6 Years", timings: "09:00 AM – 12:00 PM", ratio: "1 : 10" },
+    { program: "Evening Program", age: "2.5–12 Years", timings: "Flexible Afternoon & Evening", ratio: "1 : 10" },
+    { program: "Day Care", age: "12 Months+", timings: "8:00 AM – 8:00 PM", ratio: "1 : 10" },
   ];
 
   const requiredDocuments = [
@@ -140,7 +141,7 @@ export function AdmissionsView() {
     },
     {
       q: "What if my toddler is not fully potty-trained?",
-      a: "No worries at all! For Play Group and Pre-Nursery, our female support caregivers are trained to assist toddlers with loving patience and help instill regular hygiene and washroom habits without any pressure.",
+      a: "No worries at all! For Toddler Group and Pre-Nursery, our female support caregivers are trained to assist toddlers with loving patience and help instill regular hygiene and washroom habits without any pressure.",
     },
     {
       q: "Do you offer transportation or van facilities?",
@@ -218,8 +219,8 @@ export function AdmissionsView() {
                 <Reveal delay={0.2}>
                   <div className="relative w-full max-w-[360px] sm:max-w-[420px]">
                     <CurvedPhoto
-                      src="/images/admissions-child.jpg"
-                      alt="Excited child ready for joyful learning at WEE SPRITES"
+                      src="/schoolimages/preschool-uniform-thumbs-up.jpg"
+                      alt="Confident young preschooler in official WEE SPRITES purple uniform giving thumbs up with completed worksheet"
                       variant="blob2"
                       offsetBg="yellow"
                       aspectRatio="4/3"
@@ -230,7 +231,7 @@ export function AdmissionsView() {
                             Limited Seats
                           </span>
                           <span className="text-[9px] sm:text-[10px] font-semibold text-white mt-0.5 whitespace-nowrap">
-                            Play Group to UKG
+                            Toddler Group to UKG
                           </span>
                         </div>
                       }
@@ -474,12 +475,13 @@ export function AdmissionsView() {
                               }`}
                             >
                               <option value="">Select a Program</option>
-                              <option value="Play Group">Play Group (1.5 – 2.5 yrs)</option>
-                              <option value="Pre-Nursery">Pre-Nursery (2.5 – 3.5 yrs)</option>
-                              <option value="Nursery">Nursery (3.5 – 4.5 yrs)</option>
-                              <option value="LKG">LKG (4.5 – 5.5 yrs)</option>
-                              <option value="UKG">UKG (5.5 – 6.5 yrs)</option>
-                              <option value="Day Care">Day Care & Evening Care</option>
+                              <option value="Toddler Group">Toddler Group (18 Months+)</option>
+                              <option value="Pre-Nursery">Pre-Nursery (2+ Years)</option>
+                              <option value="Nursery">Nursery (3–4 Years)</option>
+                              <option value="LKG">LKG (4–5 Years)</option>
+                              <option value="UKG">UKG (5–6 Years)</option>
+                              <option value="Evening Program">Evening Program (2.5–12 Years)</option>
+                              <option value="Day Care">Day Care (12 Months+)</option>
                             </select>
                             {errors.program && (
                               <p className="text-[11px] text-rose-500 mt-1 font-semibold">

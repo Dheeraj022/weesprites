@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/hero-child.jpg",
+        url: "/schoolimages/weesprites-boat-tagline-boys.jpg",
         width: 1200,
         height: 630,
         alt: "WEE SPRITES Preschool website directory and sitemap",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "HTML Sitemap | WEE SPRITES Preschool",
     description:
       "Complete site index and navigation guide for WEE SPRITES Preschool.",
-    images: ["/images/hero-child.jpg"],
+    images: ["/schoolimages/weesprites-boat-tagline-boys.jpg"],
   },
 };
 

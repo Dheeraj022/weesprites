@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/gallery/gallery-annual-day-stage.jpg",
+        url: "/schoolimages/baisakhi-celebration.jpg",
         width: 1200,
         height: 630,
-        alt: "Preschool students performing festive group dance on Annual Day stage at WEE SPRITES",
+        alt: "WEE SPRITES students and families celebrating festivals at WEE SPRITES",
       },
     ],
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "Photo Gallery & Events | Life at WEE SPRITES",
     description:
       "Explore unforgettable childhood milestones, cultural events, and sensory learning at WEE SPRITES.",
-    images: ["/images/gallery/gallery-annual-day-stage.jpg"],
+    images: ["/schoolimages/baisakhi-celebration.jpg"],
   },
 };
 

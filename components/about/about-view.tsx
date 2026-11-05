@@ -56,7 +56,7 @@ export function AboutView() {
       icon: <Sun className="w-6 h-6 text-brand-yellow-dark" />,
       title: "Joyful Experiential Play",
       description:
-        "Learning through tactile Montessori materials, dramatic role-play, sensory exploration, and creative expression.",
+        "Learning through tactile materials, dramatic role-play, sensory exploration, and creative expression.",
       accent: "bg-amber-50 text-amber-700 border-amber-200",
     },
     {
@@ -70,7 +70,7 @@ export function AboutView() {
       icon: <GraduationCap className="w-6 h-6 text-brand-violet" />,
       title: "Certified Early Educators",
       description:
-        "Passionate, background-verified educators undergo continuous training in modern pedagogy, pediatric first aid, and child psychology.",
+        "Passionate, background-verified educators undergo continuous training in modern early childhood frameworks, pediatric first aid, and child psychology.",
       accent: "bg-purple-50 text-purple-700 border-purple-200",
     },
     {
@@ -83,10 +83,10 @@ export function AboutView() {
   ];
 
   const milestones = [
-    { number: "500+", label: "Happy Little Graduates", detail: "Thriving in top primary schools" },
-    { number: "1 : 8", label: "Mentor to Child Ratio", detail: "Personalized care and mentoring" },
-    { number: "100%", label: "Certified ECE Educators", detail: "Trained in Montessori & play-way" },
-    { number: "4,000+", label: "Sq. Ft. Safe Campus", detail: "Indoor soft play & sensory zones" },
+    { number: "250+", label: "Happy Little Graduates", detail: "Thriving in top primary schools" },
+    { number: "1 : 10", label: "Teacher to Child Ratio", detail: "4 Teachers for 40 Children" },
+    { number: "100%", label: "Certified ECE Educators", detail: "Trained in early years & play-way" },
+    { number: "2,000+", label: "Square Feet Safe Campus", detail: "Indoor soft play & sensory zones" },
   ];
 
   const developmentalPillars = [
@@ -200,8 +200,8 @@ export function AboutView() {
                 <Reveal delay={0.2}>
                   <div className="relative w-full max-w-[360px] sm:max-w-[420px]">
                     <CurvedPhoto
-                      src="/images/about-child.jpg"
-                      alt="Happy children exploring and laughing at WEE SPRITES Preschool"
+                      src="/schoolimages/parent-toddler-warmth.jpg"
+                      alt="Warm educator and happy toddler celebrating together at WEE SPRITES"
                       variant="blob2"
                       offsetBg="yellow"
                       aspectRatio="4/3"
@@ -257,8 +257,8 @@ export function AboutView() {
                 <Reveal delay={0.1}>
                   <div className="relative w-full max-w-[360px] sm:max-w-[420px]">
                     <CurvedPhoto
-                      src="/images/about-boy.jpg"
-                      alt="Curious boy learning with Montessori wooden blocks"
+                      src="/schoolimages/campus-gate-ribbon-cutting.jpg"
+                      alt="Official ribbon-cutting celebration at WEE SPRITES campus gate"
                       variant="blob1"
                       offsetBg="lilac"
                       aspectRatio="4/3"
@@ -287,7 +287,7 @@ export function AboutView() {
 
                 <Reveal delay={0.25}>
                   <p className="text-base text-text-body leading-relaxed">
-                    Rather than forcing rigid rote routines, our dual pedagogy combines the best of <strong>Montessori hands-on discovery</strong> and the <strong>Play-Way methodology</strong>. We empower toddlers and preschoolers to choose activities that captivate their interest, solve problems collaboratively, and build genuine pride in their discoveries.
+                    Rather than forcing rigid rote routines, our child-centric approach combines the best of <strong>hands-on sensory discovery</strong> and the <strong>Play-Way methodology</strong>. We empower toddlers and preschoolers to choose activities that captivate their interest, solve problems collaboratively, and build genuine pride in their discoveries.
                   </p>
                 </Reveal>
 
@@ -362,7 +362,7 @@ export function AboutView() {
             <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
               <Reveal delay={0.05}>
                 <span className="text-xs md:text-sm font-extrabold uppercase tracking-wider text-brand-violet">
-                  OUR HOLISTIC PEDAGOGY
+                  OUR HOLISTIC LEARNING APPROACH
                 </span>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-text-primary mt-2">
                   Four Pillars of Early Childhood Growth
@@ -408,12 +408,12 @@ export function AboutView() {
                   <div className="relative w-full max-w-2xl lg:max-w-none rounded-[32px] sm:rounded-[36px] md:rounded-[40px] overflow-hidden bg-white p-3 sm:p-4 shadow-floating border-2 md:border-[3px] border-brand-violet hover:border-brand-violet hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
                     <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full rounded-2xl sm:rounded-[24px] md:rounded-[28px] overflow-hidden bg-brand-violet-soft/40">
                       <Image
-                        src="/images/teachers-team.jpg"
+                        src="/schoolimages/teachers-team-sarees-wide.jpg"
                         alt="Dedicated educators and leadership team of WEE SPRITES Preschool"
                         fill
                         priority
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 50vw"
-                        className="object-cover object-center transition-transform duration-700 hover:scale-105"
+                        className="object-cover object-top transition-transform duration-700 hover:scale-105"
                       />
                     </div>
                     <div className="p-3.5 sm:p-4 text-center">
@@ -525,24 +525,28 @@ export function AboutView() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
-                  img: "/images/facility-classrooms.jpg",
+                  img: "/schoolimages/classroom-roundtable-crafts.jpg",
                   title: "Naturally Lit Classrooms",
                   desc: "Air-conditioned, ergonomically proportioned child furniture and low shelves for autonomous choice.",
+                  position: "object-center",
                 },
                 {
-                  img: "/images/facility-indoor-play.jpg",
+                  img: "/schoolimages/hero-toddler-ball-pit.jpg",
                   title: "Indoor Play & Ball Pools",
                   desc: "Soft foam flooring, climbing modules, and active motor exploration in all weather.",
+                  position: "object-center",
                 },
                 {
-                  img: "/images/facility-learning-resources.jpg",
-                  title: "Montessori & STEM Kits",
+                  img: "/schoolimages/pattern-writing-workbook.jpg",
+                  title: "Early STEM & Sensory Kits",
                   desc: "Curated picture book library, tactile wooden puzzles, and early scientific curiosity kits.",
+                  position: "object-top",
                 },
                 {
-                  img: "/images/facility-safe-campus.jpg",
+                  img: "/schoolimages/campus-outdoor-turf-play.jpg",
                   title: "Secure & Monitored Campus",
                   desc: "24/7 CCTV surveillance, biometric access, child-safe rounded corner fixtures, and sanitized rooms.",
+                  position: "object-center",
                 },
               ].map((f, i) => (
                 <Reveal key={f.title} delay={0.08 + i * 0.08}>
@@ -552,7 +556,7 @@ export function AboutView() {
                         src={f.img}
                         alt={f.title}
                         fill
-                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                        className={`object-cover ${f.position || "object-center"} transition-transform duration-700 ease-out group-hover:scale-108`}
                       />
                     </div>
                     <div className="p-4 flex-1 text-left">

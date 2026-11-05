@@ -40,7 +40,7 @@ export function FranchiseSection({ onOpenEnquiry }: FranchiseSectionProps) {
 
             <Reveal delay={0.15}>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">
-                Bring <span className="text-brand-yellow underline decoration-wavy decoration-brand-yellow/60">WEE SPRITES</span> to Your City
+                Bring <span className="text-brand-yellow">WEE SPRITES</span> to Your City
               </h2>
             </Reveal>
 

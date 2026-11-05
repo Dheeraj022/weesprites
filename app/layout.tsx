@@ -4,16 +4,17 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://weesprites.com"),
   title: {
-    default: "WEE SPRITES Preschool | Learn, Play & Grow",
+    default: "WEE SPRITES Preschool | We Care, We Share",
     template: "%s | WEE SPRITES Preschool",
   },
   description:
-    "Discover WEE SPRITES Preschool, a joyful environment where children learn, play and grow. Explore programs, admissions and franchise opportunities.",
+    "Discover WEE SPRITES Preschool & Day Care. We care, we share, for the future, we prepare. Explore programs, admissions and franchise opportunities.",
   keywords: [
     "WEE SPRITES",
     "Preschool",
     "Day Care",
-    "Play Group",
+    "Toddler Group",
+    "Pre-Nursery",
     "Nursery",
     "Kindergarten",
     "Preschool Franchise",
@@ -21,9 +22,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "WEE SPRITES Preschool" }],
   openGraph: {
-    title: "WEE SPRITES Preschool | Learn, Play & Grow",
+    title: "WEE SPRITES Preschool | We Care, We Share",
     description:
-      "A joyful environment where children learn, play and grow with confidence. Explore programs, admissions and franchise opportunities.",
+      "We care, we share, for the future, we prepare. A joyful environment where children learn, play and grow with confidence. Explore programs, admissions and franchise opportunities.",
     url: "https://weesprites.com",
     siteName: "WEE SPRITES Preschool",
     locale: "en_IN",
@@ -31,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "WEE SPRITES Preschool | Learn, Play & Grow",
+    title: "WEE SPRITES Preschool | We Care, We Share",
     description:
-      "A joyful environment where children learn, play and grow with confidence. Explore programs, admissions and franchise opportunities.",
+      "We care, we share, for the future, we prepare. A joyful environment where children learn, play and grow with confidence. Explore programs, admissions and franchise opportunities.",
   },
   icons: {
     icon: [

@@ -71,7 +71,7 @@ export function SiteHeader({ onOpenEnquiry }: SiteHeaderProps) {
     }
 
     if (pathname === "/contact" || pathname === "/contact-us") {
-      setActiveItem("Contact Us");
+      setActiveItem("Contact");
       const handleScroll = () => {
         setIsScrolled(window.scrollY > 20);
       };
@@ -134,7 +134,7 @@ export function SiteHeader({ onOpenEnquiry }: SiteHeaderProps) {
           {/* Desktop Navigation */}
           <nav
             aria-label="Main Navigation"
-            className="hidden lg:flex items-center justify-center gap-0.5 xl:gap-1.5 shrink-0"
+            className="hidden lg:flex items-center justify-center gap-1 xl:gap-3.5 shrink-0"
           >
             {siteConfig.navigation.map((item) => {
               const isActive = activeItem === item.label;
@@ -143,10 +143,10 @@ export function SiteHeader({ onOpenEnquiry }: SiteHeaderProps) {
                   key={item.label}
                   href={item.href}
                   onClick={() => setActiveItem(item.label)}
-                  className={`whitespace-nowrap shrink-0 px-2 py-1 lg:px-2 lg:py-1 xl:px-3 xl:py-1.5 2xl:px-3.5 rounded-full text-[12px] xl:text-[13px] 2xl:text-sm font-bold tracking-tight xl:tracking-normal transition-all duration-200 select-none ${
+                  className={`whitespace-nowrap shrink-0 px-1.5 py-1 xl:px-2.5 text-sm lg:text-[14px] xl:text-base font-extrabold tracking-tight transition-colors duration-200 select-none ${
                     isActive
-                      ? "bg-brand-violet-soft text-brand-violet font-extrabold shadow-xs"
-                      : "text-text-primary hover:text-brand-violet hover:bg-brand-violet-soft/60"
+                      ? "text-brand-violet font-black"
+                      : "text-text-primary hover:text-brand-violet"
                   }`}
                 >
                   {item.label}

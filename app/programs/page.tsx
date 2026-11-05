@@ -4,24 +4,24 @@ import { ProgramsView } from "@/components/programs/programs-view";
 export const metadata: Metadata = {
   title: "Preschool Programs & Age-Wise Curriculum",
   description:
-    "Explore our 6 comprehensive early childhood programs at WEE SPRITES: Play Group (1.5–2.5 yrs), Pre-Nursery (2.5–3.5 yrs), Nursery (3.5–4.5 yrs), LKG, UKG, and Evening Activity Care.",
+    "Explore our 7 comprehensive early childhood programs at WEE SPRITES: Toddler Group (18 Months+), Pre-Nursery (2+ Years), Nursery (3–4 Years), LKG, UKG, Evening Program, and Day Care.",
   alternates: {
     canonical: "/programs",
   },
   openGraph: {
     title: "Preschool & Day Care Programs | WEE SPRITES",
     description:
-      "Comprehensive, developmental milestones-aligned curriculum spanning Play Group to Kindergarten and extended Day Care. Review batch timings and curriculum comparison matrix.",
+      "Comprehensive, developmental milestones-aligned curriculum spanning Toddler Group to Kindergarten and extended Day Care. Review batch timings and curriculum comparison matrix.",
     url: "https://weesprites.com/programs",
     siteName: "WEE SPRITES Preschool",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "/images/program-playgroup.jpg",
+        url: "/schoolimages/two-sisters-ball-pool.jpg",
         width: 1200,
         height: 630,
-        alt: "Preschool children engaged in sensory playgroup learning at WEE SPRITES",
+        alt: "Preschool children engaged in sensory toddler group learning at WEE SPRITES",
       },
     ],
   },
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Preschool Programs & Age-Wise Curriculum | WEE SPRITES",
     description:
-      "Play Group, Pre-Nursery, Nursery, LKG, UKG, and Evening Care programs tailored for curious little learners.",
-    images: ["/images/program-playgroup.jpg"],
+      "Toddler Group, Pre-Nursery, Nursery, LKG, UKG, Evening Program, and Day Care tailored for curious little learners.",
+    images: ["/schoolimages/two-sisters-ball-pool.jpg"],
   },
 };
 

@@ -29,7 +29,7 @@ export default function NotFound() {
   const quickLinks = [
     {
       title: "Explore Programs",
-      description: "Play Group, Pre-Nursery, Nursery, LKG, UKG & Day Care.",
+      description: "Toddler Group, Pre-Nursery, Nursery, LKG, UKG, Evening & Day Care.",
       href: "/programs",
       icon: <GraduationCap className="w-5 h-5 text-brand-violet" />,
       tag: "Curriculum",

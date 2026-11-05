@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/facility-safe-campus.jpg",
+        url: "/schoolimages/school-inauguration-ceremony.jpg",
         width: 1200,
         height: 630,
         alt: "Safe, monitored, child-friendly campus environment at WEE SPRITES Preschool",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "Privacy Policy | WEE SPRITES Preschool",
     description:
       "Read our strict data protection protocols, CCTV security, and parent privacy guidelines.",
-    images: ["/images/facility-safe-campus.jpg"],
+    images: ["/schoolimages/school-inauguration-ceremony.jpg"],
   },
 };
 
