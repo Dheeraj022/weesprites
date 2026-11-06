@@ -49,7 +49,7 @@ export function SitemapView() {
         { name: "Programs", href: "/programs", desc: "Age-aligned curriculum breakdown from Toddler Group to UKG & Day Care." },
         { name: "Admissions", href: "/admissions", desc: "Admissions criteria, 4-step registration, documents checklist, and form." },
         { name: "Franchise Opportunity", href: "/franchise", desc: "Comprehensive business opportunity, unit economics, and partnership enquiry." },
-        { name: "Gallery & Events", href: "/gallery", desc: "24-photo interactive showcase of festivals, annual day dances, and arts." },
+        { name: "Gallery & Events", href: "/gallery", desc: "Interactive showcase of festivals, celebrations, and classroom arts." },
         { name: "Contact Us", href: "/contact", desc: "Direct campus coordinates, telephone helpline, transit guide, and Google Map." },
       ],
     },

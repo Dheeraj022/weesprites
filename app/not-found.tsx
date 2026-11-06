@@ -50,7 +50,7 @@ export default function NotFound() {
     },
     {
       title: "Campus Photo Gallery",
-      description: "24-photo showcase of Annual Day, festivals, and activities.",
+      description: "Interactive showcase of festivals, celebrations, and classroom activities.",
       href: "/gallery",
       icon: <ImageIcon className="w-5 h-5 text-brand-violet" />,
       tag: "Moments",

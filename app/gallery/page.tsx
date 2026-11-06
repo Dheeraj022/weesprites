@@ -4,7 +4,7 @@ import { GalleryView } from "@/components/gallery/gallery-view";
 export const metadata: Metadata = {
   title: "Photo Gallery & Events | Life at WEE SPRITES",
   description:
-    "Explore our 24-photo interactive gallery capturing Annual Day stage performances, Gandhi Jayanti, Dussehra, clay art, sports day, and daily classroom discoveries at WEE SPRITES Preschool.",
+    "Explore our interactive gallery capturing Dussehra, clay art, sports day, and daily classroom discoveries at WEE SPRITES Preschool.",
   alternates: {
     canonical: "/gallery",
   },
