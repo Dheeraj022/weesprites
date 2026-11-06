@@ -25,18 +25,14 @@ export function MobileNav({ isOpen, onClose, onOpenEnquiry }: MobileNavProps) {
     >
       {/* Header bar inside mobile nav */}
       <div className="flex items-center justify-between px-6 py-4 border-b border-border-soft">
-        <div className="flex items-center gap-3">
-          <div className="relative w-[72px] h-[72px] sm:w-20 sm:h-20 shrink-0">
+        <div className="flex items-center">
+          <div className="relative h-12 w-48 sm:h-14 sm:w-56 shrink-0">
             <Image
-              src="/weespritesoriginalogo.png"
+              src="/logo/weespriteslogo.png"
               alt="WEE SPRITES Preschool & Day Care"
               fill
-              className="object-contain"
+              className="object-contain object-left"
             />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-black text-brand-violet text-xl tracking-tight leading-tight">WEE SPRITES</span>
-            <span className="text-[11px] font-bold text-text-secondary uppercase tracking-wider">Preschool & Day Care</span>
           </div>
         </div>
         <button

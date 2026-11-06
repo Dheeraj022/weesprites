@@ -120,13 +120,13 @@ export function SiteHeader({ onOpenEnquiry }: SiteHeaderProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-5 lg:px-6 xl:px-8 flex items-center justify-between gap-2 lg:gap-3 xl:gap-6">
           {/* Logo */}
           <Link href="/" className="flex items-center group shrink-0" aria-label="WEE SPRITES Preschool Home">
-            <div className="relative h-[84px] w-[84px] sm:h-[88px] sm:w-[88px] md:h-20 md:w-20 lg:h-[88px] lg:w-[88px] xl:h-[96px] xl:w-[96px] 2xl:h-[104px] 2xl:w-[104px]">
+            <div className="relative h-11 w-[140px] sm:h-12 sm:w-[155px] md:h-14 md:w-[180px] lg:h-16 lg:w-[205px] xl:h-[72px] xl:w-[230px]">
               <Image
-                src="/weespritesoriginalogo.png"
+                src="/logo/weespriteslogo.png"
                 alt="WEE SPRITES Preschool & Day Care"
                 fill
                 priority
-                className="object-contain group-hover:scale-105 transition-transform"
+                className="object-contain object-left group-hover:scale-105 transition-transform"
               />
             </div>
           </Link>

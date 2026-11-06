@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/weespritesoriginalogo.png", sizes: "any" },
+      { url: "/logo/weespriteslogo.png", sizes: "any" },
     ],
-    apple: "/weespritesoriginalogo.png",
+    apple: "/logo/weespriteslogo.png",
   },
 };
 

@@ -14,10 +14,10 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-white/15">
           {/* Col 1: Brand Info & Tagline */}
           <div className="lg:col-span-4 text-left space-y-4">
-            <div className="inline-block p-3 sm:p-3.5 bg-white rounded-3xl sm:rounded-4xl shadow-md">
-              <div className="relative h-32 w-32 sm:h-36 sm:w-36 md:h-40 md:w-40 lg:h-44 lg:w-44">
+            <div className="inline-block p-3 sm:p-4 bg-white rounded-2xl sm:rounded-3xl shadow-md">
+              <div className="relative h-14 w-48 sm:h-16 sm:w-56 md:h-18 md:w-60">
                 <Image
-                  src="/weespritesoriginalogo.png"
+                  src="/logo/weespriteslogo.png"
                   alt="WEE SPRITES Preschool & Day Care"
                   fill
                   className="object-contain"
