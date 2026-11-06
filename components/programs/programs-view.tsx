@@ -257,12 +257,36 @@ export function ProgramsView() {
   ];
 
   const dailySchedule = [
-    { time: "09:00 AM", title: "Warm Arrival & Morning Circle", desc: "Joyful greetings, action rhymes, daily calendar, and feelings check-in." },
-    { time: "09:40 AM", title: "Hands-On Learning & Discovery", desc: "Autonomous workstation selection: phonics, math manipulatives, and sensory kits." },
-    { time: "10:30 AM", title: "Nutritious Snack & Table Etiquette", desc: "Healthy dining, hand hygiene, and courteous conversation practice." },
-    { time: "11:00 AM", title: "Active Indoor/Outdoor Motor Play", desc: "Climbing modules, obstacle courses, ball pools, dance, and yoga balance." },
-    { time: "11:45 AM", title: "Sensory Arts & Creative Dramatics", desc: "Painting, clay sculpting, storytelling, puppet theatre, and role-play." },
-    { time: "12:30 PM", title: "Reflection Circle & Departure / Day Care", desc: "Milestone recap, tidy-up song, and gentle transition for afternoon learners." },
+    {
+      time: "9:00 AM – 9:30 AM",
+      title: "Welcome and Morning Prayer",
+      subtitle: "Morning Circle & Assembly",
+      desc: "Warm arrival greetings, cheerful good morning songs, prayer assembly, and positive emotional check-in to begin the day.",
+    },
+    {
+      time: "9:30 AM – 10:30 AM",
+      title: "Discovery & Core Learning",
+      subtitle: "Cognitive Abilities and Skills",
+      desc: "Structured cognitive skill development: phonics sounds, early numeracy logic, tactile workstations, and hands-on inquiry.",
+    },
+    {
+      time: "10:30 AM – 11:00 AM",
+      title: "Fuel & Fellowship",
+      subtitle: "Healthy Snack Break",
+      desc: "Wholesome snack time instilling mindful dining etiquette, hand hygiene routines, and courteous peer conversation.",
+    },
+    {
+      time: "11:00 AM – 11:30 AM",
+      title: "Active Play & Creative Expressions",
+      subtitle: "Motor & Art Zone",
+      desc: "Energizing motor and art zone activities featuring physical agility, obstacle challenges, creative arts, and musical expression.",
+    },
+    {
+      time: "11:30 AM – 12:00 PM",
+      title: "Storybook Magic & Calm Zone",
+      subtitle: "Safe Dispersal",
+      desc: "Interactive illustrated storytelling, peaceful reflection circle, soothing wind-down routines, and orderly safe dispersal.",
+    },
   ];
 
   const filteredPrograms =
@@ -535,22 +559,32 @@ export function ProgramsView() {
               </Reveal>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+            <div className="flex flex-wrap justify-center gap-6 text-left">
               {dailySchedule.map((item, idx) => (
-                <Reveal key={item.time} delay={0.08 + idx * 0.06}>
-                  <div className="p-6 rounded-3xl bg-white border border-border-soft shadow-card hover:shadow-floating hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-violet text-brand-yellow font-extrabold text-xs self-start mb-3">
-                      <Clock className="w-3.5 h-3.5" />
-                      <span>{item.time}</span>
+                <div
+                  key={item.time}
+                  className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex"
+                >
+                  <Reveal delay={0.08 + idx * 0.06} className="w-full flex">
+                    <div className="p-6 rounded-3xl bg-white border border-border-soft shadow-card hover:shadow-floating hover:-translate-y-1 transition-all duration-300 flex flex-col w-full h-full">
+                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-violet text-brand-yellow font-extrabold text-xs self-start mb-3">
+                        <Clock className="w-3.5 h-3.5" />
+                        <span>{item.time}</span>
+                      </div>
+                      <h3 className="text-base sm:text-lg font-black text-text-primary mb-1">
+                        {item.title}
+                      </h3>
+                      {item.subtitle && (
+                        <p className="text-xs font-bold text-brand-violet mb-2.5">
+                          {item.subtitle}
+                        </p>
+                      )}
+                      <p className="text-xs sm:text-sm text-text-body leading-relaxed flex-1">
+                        {item.desc}
+                      </p>
                     </div>
-                    <h3 className="text-base font-black text-text-primary mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-text-body leading-relaxed flex-1">
-                      {item.desc}
-                    </p>
-                  </div>
-                </Reveal>
+                  </Reveal>
+                </div>
               ))}
             </div>
           </div>
