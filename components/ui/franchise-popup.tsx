@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { X, CheckCircle2, Loader2, Phone, Mail, User, MapPin, Sparkles, ArrowRight } from "lucide-react";
+import { X, CheckCircle2, Loader2, Phone, Mail, User, MapPin, ArrowRight } from "lucide-react";
 import { CtaButton } from "./cta-button";
 
 const franchisePopupSchema = z.object({
@@ -164,18 +164,9 @@ export function FranchisePopup() {
             </div>
           ) : (
             <div>
-              <div className="mb-4">
-                <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-brand-violet-soft text-brand-violet text-[11px] font-extrabold uppercase tracking-wide mb-1.5">
-                  <Sparkles className="w-3 h-3" />
-                  <span>360° Setup • High ROI • Full Mentorship</span>
-                </div>
-                <h3 id="franchise-popup-title" className="text-lg sm:text-xl font-black text-text-primary leading-tight">
-                  Request Franchise Information Docket
-                </h3>
-                <p className="text-xs sm:text-sm text-text-secondary mt-0.5">
-                  Partner with a trusted early childhood brand. Submit your details to receive our comprehensive investment docket.
-                </p>
-              </div>
+              <h3 id="franchise-popup-title" className="sr-only">
+                Request Franchise Information
+              </h3>
 
               {/* Form */}
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-3.5">
