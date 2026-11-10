@@ -120,35 +120,31 @@ export function FranchisePopup() {
       onClick={handleClose}
     >
       <div
-        className="relative w-full max-w-lg md:max-w-xl bg-white rounded-3xl sm:rounded-4xl shadow-2xl overflow-hidden border border-border-soft animate-scaleUp text-left"
+        className="relative w-full max-w-lg md:max-w-xl bg-white rounded-3xl sm:rounded-4xl shadow-2xl overflow-hidden border border-border-soft animate-scaleUp text-left max-h-[92vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Top Decorative Banner */}
-        <div className="bg-gradient-to-r from-brand-violet via-brand-violet-dark to-brand-violet px-5 sm:px-7 py-5 text-white relative">
+        {/* Top Graphic Banner */}
+        <div className="relative w-full aspect-[16/9] sm:aspect-[16/8.5] bg-brand-violet-dark overflow-hidden shrink-0">
+          <Image
+            src="/wee-sprites-banner.png"
+            alt="WEE SPRITES Franchise Opportunity - Own a Preschool, Shape the Future"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          {/* Close button with high-contrast frosted backdrop */}
           <button
             type="button"
             onClick={handleClose}
             aria-label="Close popup"
-            className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/15 text-white hover:bg-white/30 flex items-center justify-center transition-colors focus:outline-none"
+            className="absolute top-3 right-3 sm:top-4 sm:right-4 w-9 h-9 rounded-full bg-black/50 hover:bg-black/75 text-white flex items-center justify-center transition-colors focus:outline-none backdrop-blur-md z-10 shadow-lg"
           >
             <X className="w-5 h-5" />
           </button>
-
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-yellow/20 border border-brand-yellow/40 text-brand-yellow text-[11px] sm:text-xs font-black tracking-wide uppercase mb-2">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>FRANCHISE OPPORTUNITY • HIGH ROI</span>
-          </div>
-
-          <h3 id="franchise-popup-title" className="text-xl sm:text-2xl font-black text-white leading-tight">
-            Bring <span className="text-brand-yellow">WEE SPRITES</span> to Your City
-          </h3>
-          <p className="text-xs sm:text-sm text-white/85 mt-1 max-w-md">
-            Partner with a premier Preschool & Day Care brand. 360° turnkey setup, proven curriculum, and strong admission demand.
-          </p>
         </div>
 
         {/* Content Body */}
-        <div className="p-5 sm:p-7 max-h-[80vh] overflow-y-auto">
+        <div className="p-5 sm:p-6 overflow-y-auto flex-1">
           {isSubmitted ? (
             <div className="py-8 text-center space-y-4">
               <div className="w-14 h-14 mx-auto rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
@@ -168,20 +164,17 @@ export function FranchisePopup() {
             </div>
           ) : (
             <div>
-              {/* Value highlights strip */}
-              <div className="grid grid-cols-3 gap-2 pb-4 mb-4 border-b border-border-soft text-center">
-                <div className="p-2 rounded-xl bg-brand-violet-soft/60">
-                  <span className="block text-xs sm:text-sm font-black text-brand-violet">2,000+ Sq Ft</span>
-                  <span className="text-[10px] text-text-body font-medium">Space Required</span>
+              <div className="mb-4">
+                <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-brand-violet-soft text-brand-violet text-[11px] font-extrabold uppercase tracking-wide mb-1.5">
+                  <Sparkles className="w-3 h-3" />
+                  <span>360° Setup • High ROI • Full Mentorship</span>
                 </div>
-                <div className="p-2 rounded-xl bg-amber-50">
-                  <span className="block text-xs sm:text-sm font-black text-amber-700">35% – 45%+</span>
-                  <span className="text-[10px] text-text-body font-medium">Annual ROI</span>
-                </div>
-                <div className="p-2 rounded-xl bg-purple-50">
-                  <span className="block text-xs sm:text-sm font-black text-purple-700">360° Setup</span>
-                  <span className="text-[10px] text-text-body font-medium">Full Support</span>
-                </div>
+                <h3 id="franchise-popup-title" className="text-lg sm:text-xl font-black text-text-primary leading-tight">
+                  Request Franchise Information Docket
+                </h3>
+                <p className="text-xs sm:text-sm text-text-secondary mt-0.5">
+                  Partner with a trusted early childhood brand. Submit your details to receive our comprehensive investment docket.
+                </p>
               </div>
 
               {/* Form */}

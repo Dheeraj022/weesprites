@@ -505,36 +505,81 @@ export const franchiseContent = {
 
 export const faqContent = {
   heading: "Frequently Asked Questions",
-  supportingText:
-    "Find clear answers about admissions, our programs, safety measures, and franchise partnerships.",
+  supportingText: "Everything Parents Would Like to Know About WEE SPRITES",
+  mottoHeading: "WEE SPRITES",
+  motto: "WE CARE, WE SHARE, FOR THE FUTURE, WE PREPARE!",
   faqs: [
     {
-      question: "Which programs are offered at WEE SPRITES?",
+      question: "What is the age criteria for admission?",
       answer:
-        "We offer comprehensive age-aligned programs including Toddler Group (18 Months+), Pre-Nursery (2+ Years), Nursery (3–4 Years), LKG (4–5 Years), UKG (5–6 Years), Evening Program (2.5–12 Years), and Day Care (12 Months+).",
-      category: "programs",
-      isDraftPendingApproval: true,
+        "We offer age-appropriate programmes to support children at every stage of their early development:\n\n• Toddler Group: 1 year 6 months to 2 years 6 months\n• Pre-Nursery: 2 years 6 months to 3 years\n• Nursery: 3 years and above\n• LKG: 4 years and above\n• UKG: 5 years and above\n\nOur team will be happy to guide you in choosing the right programme for your child.",
+      category: "admissions" as const,
     },
     {
-      question: "How can parents enquire about and register for admission?",
+      question: "What if my child is not fully toilet-trained?",
       answer:
-        "You can click the 'Enquire for Admissions' button on this page to submit your details. Our admissions counselor will schedule a campus tour and walk you through the simple enrolment process.",
-      category: "admissions",
-      isDraftPendingApproval: true,
+        "There is absolutely no need to worry! Every child develops at their own pace. Being fully toilet-trained is not a barrier to admission.\n\nOur caring staff will gently encourage your child towards toilet training and personal hygiene. We work closely with parents to make this transition comfortable, positive and stress-free.",
+      category: "admissions" as const,
     },
     {
-      question: "What is the teacher-to-child ratio?",
+      question: "Do you offer transportation facilities?",
       answer:
-        "We maintain an approved teacher-to-child ratio of 1:10 (4 Teachers for 40 Children) alongside dedicated support caregivers to guarantee personalized attention and safety.",
-      category: "general",
-      isDraftPendingApproval: true,
+        "Transportation assistance may be available for selected routes, subject to availability and route feasibility. Child safety is our priority. Please contact our school office to check whether transportation is available in your area and to know the applicable charges.",
+      category: "general" as const,
     },
     {
-      question: "What is the process to start a WEE SPRITES franchise?",
+      question: "Can we visit the preschool on a Saturday?",
       answer:
-        "To explore a preschool franchise with WEE SPRITES, submit the Franchise Enquiry form. Our franchise development team will share the complete information docket, investment framework, and site selection guidelines.",
-      category: "franchise",
-      isDraftPendingApproval: true,
+        "Absolutely! We would love to welcome you and your little one to WEE SPRITES.\n\nYou can schedule a visit to explore our preschool, meet our team, understand our programmes and experience our learning environment. Saturday visits can be arranged with a prior appointment, subject to availability.",
+      category: "admissions" as const,
+    },
+    {
+      question: "What are the school timings?",
+      answer:
+        "Our preschool offers age-appropriate schedules to ensure that children enjoy a balanced routine of learning, play, creativity and rest. Please contact our school office for the latest batch timings and programme details.",
+      category: "programs" as const,
+    },
+    {
+      question: "Do you provide Day Care facilities?",
+      answer:
+        "Yes! Our Day Care provides a caring, comfortable and supervised environment for children while their parents are at work or attending to other responsibilities.\n\nChildren enjoy a balanced routine with playtime, creative activities, rest and opportunities for social interaction.",
+      category: "programs" as const,
+    },
+    {
+      question: "Do you provide meals and snacks for children?",
+      answer:
+        "Yes, meals and snacks are provided as part of the children's daily routine. We encourage healthy eating habits and nutritious food choices. Parents sending an additional snack for Day Care are requested to avoid chips, chocolates and other junk food.",
+      category: "general" as const,
+    },
+    {
+      question: "How do you help children settle into a new environment?",
+      answer:
+        "We understand that starting preschool is a big milestone for both children and parents. Our teachers provide individual attention, warmth and reassurance to help children settle in comfortably.\n\nThrough play, interaction and a gentle daily routine, we help children build confidence and develop a sense of belonging.",
+      category: "general" as const,
+    },
+    {
+      question: "What activities do children participate in at WEE SPRITES?",
+      answer:
+        "Learning at WEE SPRITES goes beyond books and classrooms. Children participate in:\n\n• Art, craft and creative expression\n• Music, dance and movement\n• Storytelling and language development\n• Sensory and hands-on activities\n• Outdoor play and physical development\n• Festivals, celebrations and theme-based activities\n• Social interaction and group learning\n\nOur aim is to make every day exciting, meaningful and full of discoveries!",
+      category: "programs" as const,
+    },
+    {
+      question: "How do you ensure the safety of children?",
+      answer:
+        "Your child's safety and well-being are our top priorities. We maintain a caring and supervised environment with attentive staff and established pickup and drop-off procedures. We also encourage parents to share important information about their child's needs with the school team.",
+      category: "general" as const,
+    },
+    {
+      question: "How can I enquire about admission?",
+      answer:
+        "You can contact our school office directly at 9582019000 or visit WEE SPRITES at:\n\nA-98, Shankar Garden, Vikaspuri, New Delhi – 110018.\n\nOur team will be happy to guide you through the admission process, explain the programmes and help you schedule a preschool visit.",
+      category: "admissions" as const,
+    },
+    {
+      question: "How can parents stay updated about school activities and events?",
+      answer:
+        "We believe that parents are important partners in a child's learning journey. We keep parents informed through school communication channels, notices, updates and activity photographs. You can also follow us on Instagram at @weespritesvikaspuri to stay connected with our celebrations and activities.",
+      category: "general" as const,
     },
   ],
 };

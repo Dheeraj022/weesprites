@@ -33,6 +33,72 @@ import { CurvedPhoto } from "@/components/ui/curved-photo";
 import { Reveal } from "@/components/ui/reveal";
 import { FloatingBlob } from "@/components/ui/floating-blob";
 import { siteConfig } from "@/lib/site-config";
+import { faqContent } from "@/lib/content";
+
+function renderFaqAnswer(answer: string) {
+  const paragraphs = answer.split("\n\n");
+  return (
+    <div className="space-y-3">
+      {paragraphs.map((p, pIdx) => {
+        // If paragraph contains bullet points
+        if (p.includes("\n• ") || p.startsWith("• ")) {
+          const lines = p.split("\n");
+          const intro = lines[0].startsWith("• ") ? null : lines[0];
+          const bullets = lines.filter((l) => l.startsWith("• "));
+          return (
+            <div key={pIdx} className="space-y-2">
+              {intro && <p className="font-semibold text-text-primary">{intro}</p>}
+              <ul className="space-y-1.5 pl-1">
+                {bullets.map((b, bIdx) => (
+                  <li key={bIdx} className="flex items-start gap-2">
+                    <span className="text-brand-violet font-black mt-0.5">•</span>
+                    <span>{b.replace(/^•\s*/, "")}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        }
+
+        // Check for phone number and instagram
+        let content: React.ReactNode = p;
+        if (p.includes("9582019000")) {
+          const parts = p.split("9582019000");
+          content = (
+            <>
+              {parts[0]}
+              <a
+                href="tel:9582019000"
+                className="font-bold text-brand-violet hover:underline inline-flex items-center gap-1"
+              >
+                9582019000
+              </a>
+              {parts[1]}
+            </>
+          );
+        } else if (p.includes("@weespritesvikaspuri")) {
+          const parts = p.split("@weespritesvikaspuri");
+          content = (
+            <>
+              {parts[0]}
+              <a
+                href="https://instagram.com/weespritesvikaspuri"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-brand-violet hover:underline inline-flex items-center gap-1"
+              >
+                @weespritesvikaspuri
+              </a>
+              {parts[1]}
+            </>
+          );
+        }
+
+        return <p key={pIdx}>{content}</p>;
+      })}
+    </div>
+  );
+}
 
 const admissionsPageSchema = z.object({
   parentName: z.string().min(2, "Parent name must be at least 2 characters"),
@@ -128,29 +194,6 @@ export function AdmissionsView() {
     { title: "Immunization Card", desc: "Record of up-to-date pediatric vaccinations & blood group" },
     { title: "Previous School Records", desc: "Report card / transfer certificate (for LKG / UKG, if applicable)" },
     { title: "Emergency Contact Details", desc: "Contact numbers of family physician and local authorized guardians" },
-  ];
-
-  const faqs = [
-    {
-      q: "What is the age cut-off date for admissions?",
-      a: "Our typical academic year cut-off is calculated as of March 31st of the enrolling year. However, because early development is unique, our academic counselor will personally evaluate your child's social and physical readiness to ensure the best placement.",
-    },
-    {
-      q: "Can parents accompany the child during initial days?",
-      a: "Yes, absolutely! We follow a gentle, heart-centered settling-in policy. Parents or a trusted caregiver are welcomed to stay in our parent lounge or attend the first few sessions until your child feels happy, secure, and familiar with the environment.",
-    },
-    {
-      q: "What if my toddler is not fully potty-trained?",
-      a: "No worries at all! For Toddler Group and Pre-Nursery, our female support caregivers are trained to assist toddlers with loving patience and help instill regular hygiene and washroom habits without any pressure.",
-    },
-    {
-      q: "Do you offer transportation or van facilities?",
-      a: "Yes, GPS-tracked, air-conditioned school cabs with female attendants are available on major routes in the surrounding neighborhood. Inquire during your campus tour for route details and pickup timings.",
-    },
-    {
-      q: "Can we visit the campus on a Saturday?",
-      a: "Yes! Our campus is open for parent walkthroughs and admissions counseling Monday through Saturday from 9:00 AM to 4:00 PM. We recommend scheduling an appointment in advance so our counselor can give you uninterrupted personal attention.",
-    },
   ];
 
   return (
@@ -655,7 +698,7 @@ export function AdmissionsView() {
         </section>
 
         {/* 7. Frequently Asked Questions */}
-        <section className="py-16 md:py-24 bg-white relative">
+        <section id="faq" className="py-16 md:py-24 bg-white relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <Reveal delay={0.05}>
@@ -663,26 +706,29 @@ export function AdmissionsView() {
                   ADMISSIONS FAQ
                 </span>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-text-primary mt-2">
-                  Frequently Asked Questions
+                  {faqContent.heading}
                 </h2>
-                <p className="mt-3 text-sm text-text-body">
-                  Everything you need to know about joining WEE SPRITES Preschool & Day Care.
+                <p className="mt-3 text-sm md:text-base text-text-body font-semibold text-brand-violet/90">
+                  {faqContent.supportingText}
                 </p>
               </Reveal>
             </div>
 
             <div className="space-y-3.5 text-left">
-              {faqs.map((faq, idx) => {
+              {faqContent.faqs.map((faq, idx) => {
                 const isOpen = activeFaq === idx;
                 return (
-                  <Reveal key={faq.q} delay={0.08 + idx * 0.05}>
+                  <Reveal key={faq.question} delay={0.08 + (idx % 6) * 0.04}>
                     <div className="rounded-2xl border border-border-soft overflow-hidden transition-all duration-200 bg-brand-cream/30 hover:border-brand-violet/40">
                       <button
                         type="button"
                         onClick={() => setActiveFaq(isOpen ? null : idx)}
                         className="w-full p-4 sm:p-5 flex items-center justify-between gap-4 text-left font-black text-sm sm:text-base text-text-primary"
                       >
-                        <span>{faq.q}</span>
+                        <span className="flex items-start gap-2.5">
+                          <span className="text-brand-violet font-black shrink-0">{idx + 1}.</span>
+                          <span>{faq.question}</span>
+                        </span>
                         <span
                           className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-brand-violet transition-transform duration-300 ${
                             isOpen ? "rotate-180 bg-brand-violet text-white" : "bg-white border border-border-soft"
@@ -693,8 +739,8 @@ export function AdmissionsView() {
                       </button>
 
                       {isOpen && (
-                        <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-text-body leading-relaxed border-t border-border-soft/60 bg-white">
-                          {faq.a}
+                        <div className="px-5 pb-5 pt-3 text-xs sm:text-sm text-text-body leading-relaxed border-t border-border-soft/60 bg-white">
+                          {renderFaqAnswer(faq.answer)}
                         </div>
                       )}
                     </div>
@@ -702,6 +748,18 @@ export function AdmissionsView() {
                 );
               })}
             </div>
+
+            {/* School Motto Banner */}
+            <Reveal delay={0.25}>
+              <div className="mt-10 md:mt-14 text-center p-6 md:p-8 rounded-3xl bg-gradient-to-r from-brand-violet/10 via-brand-yellow/15 to-brand-lilac/30 border border-brand-violet/20 shadow-sm">
+                <span className="text-xs md:text-sm font-black uppercase tracking-widest text-brand-violet">
+                  {faqContent.mottoHeading}
+                </span>
+                <p className="mt-1 text-base sm:text-lg md:text-xl font-black text-text-primary tracking-wide">
+                  {faqContent.motto}
+                </p>
+              </div>
+            </Reveal>
           </div>
         </section>
 

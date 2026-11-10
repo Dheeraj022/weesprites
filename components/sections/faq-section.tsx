@@ -1,9 +1,74 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, HelpCircle } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { faqContent } from "@/lib/content";
 import { Reveal } from "../ui/reveal";
+
+function renderFaqAnswer(answer: string) {
+  const paragraphs = answer.split("\n\n");
+  return (
+    <div className="space-y-3">
+      {paragraphs.map((p, pIdx) => {
+        // If paragraph contains bullet points
+        if (p.includes("\n• ") || p.startsWith("• ")) {
+          const lines = p.split("\n");
+          const intro = lines[0].startsWith("• ") ? null : lines[0];
+          const bullets = lines.filter((l) => l.startsWith("• "));
+          return (
+            <div key={pIdx} className="space-y-2">
+              {intro && <p className="font-semibold text-text-primary">{intro}</p>}
+              <ul className="space-y-1.5 pl-1">
+                {bullets.map((b, bIdx) => (
+                  <li key={bIdx} className="flex items-start gap-2">
+                    <span className="text-brand-violet font-black mt-0.5">•</span>
+                    <span>{b.replace(/^•\s*/, "")}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        }
+
+        // Check for phone number and instagram
+        let content: React.ReactNode = p;
+        if (p.includes("9582019000")) {
+          const parts = p.split("9582019000");
+          content = (
+            <>
+              {parts[0]}
+              <a
+                href="tel:9582019000"
+                className="font-bold text-brand-violet hover:underline inline-flex items-center gap-1"
+              >
+                9582019000
+              </a>
+              {parts[1]}
+            </>
+          );
+        } else if (p.includes("@weespritesvikaspuri")) {
+          const parts = p.split("@weespritesvikaspuri");
+          content = (
+            <>
+              {parts[0]}
+              <a
+                href="https://instagram.com/weespritesvikaspuri"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-brand-violet hover:underline inline-flex items-center gap-1"
+              >
+                @weespritesvikaspuri
+              </a>
+              {parts[1]}
+            </>
+          );
+        }
+
+        return <p key={pIdx}>{content}</p>;
+      })}
+    </div>
+  );
+}
 
 export function FaqSection() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
@@ -25,7 +90,7 @@ export function FaqSection() {
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className="mt-3 text-sm md:text-base text-text-body">
+            <p className="mt-3 text-sm md:text-base text-text-body font-semibold text-brand-violet/90">
               {faqContent.supportingText}
             </p>
           </Reveal>
@@ -36,16 +101,17 @@ export function FaqSection() {
           {faqContent.faqs.map((faq, idx) => {
             const isOpen = openIdx === idx;
             return (
-              <Reveal key={faq.question} delay={0.1 + idx * 0.05}>
-                <div className="rounded-2xl md:rounded-3xl border border-border-soft bg-white overflow-hidden shadow-sm transition-all duration-200">
+              <Reveal key={faq.question} delay={0.08 + (idx % 6) * 0.04}>
+                <div className="rounded-2xl md:rounded-3xl border border-border-soft bg-white overflow-hidden shadow-sm hover:border-brand-violet/30 transition-all duration-200">
                   <button
                     type="button"
                     onClick={() => toggle(idx)}
                     aria-expanded={isOpen}
                     className="w-full flex items-center justify-between p-4 md:p-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-violet"
                   >
-                    <span className="text-sm md:text-base font-extrabold text-text-primary pr-4">
-                      {faq.question}
+                    <span className="text-sm md:text-base font-extrabold text-text-primary pr-4 flex items-start gap-2.5">
+                      <span className="text-brand-violet font-black shrink-0">{idx + 1}.</span>
+                      <span>{faq.question}</span>
                     </span>
                     <div
                       className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
@@ -59,13 +125,8 @@ export function FaqSection() {
                   </button>
 
                   {isOpen && (
-                    <div className="px-5 pb-5 pt-1 text-xs md:text-sm text-text-body leading-relaxed border-t border-border-soft/40">
-                      <p>{faq.answer}</p>
-                      {faq.isDraftPendingApproval && (
-                        <p className="mt-2 text-[10px] text-brand-violet font-semibold">
-                          * Information provided for initial guidance; confirm details during admissions counseling.
-                        </p>
-                      )}
+                    <div className="px-5 pb-5 pt-3 text-xs md:text-sm text-text-body leading-relaxed border-t border-border-soft/40">
+                      {renderFaqAnswer(faq.answer)}
                     </div>
                   )}
                 </div>
@@ -73,6 +134,18 @@ export function FaqSection() {
             );
           })}
         </div>
+
+        {/* School Motto Banner */}
+        <Reveal delay={0.25}>
+          <div className="mt-10 md:mt-14 text-center p-6 md:p-8 rounded-3xl bg-gradient-to-r from-brand-violet/10 via-brand-yellow/15 to-brand-lilac/30 border border-brand-violet/20 shadow-sm">
+            <span className="text-xs md:text-sm font-black uppercase tracking-widest text-brand-violet">
+              {faqContent.mottoHeading}
+            </span>
+            <p className="mt-1 text-base sm:text-lg md:text-xl font-black text-text-primary tracking-wide">
+              {faqContent.motto}
+            </p>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

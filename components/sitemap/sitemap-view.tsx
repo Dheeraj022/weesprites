@@ -75,7 +75,7 @@ export function SitemapView() {
         { name: "Online Admissions Enquiry", href: "/admissions#enquiry-form", desc: "Submit your details for a guaranteed priority consultation." },
         { name: "Age Eligibility Table", href: "/admissions#eligibility-table", desc: "Official cutoff milestones across all programs." },
         { name: "Documentation Checklist", href: "/admissions#documents-checklist", desc: "Required birth certificates, medical forms, and photos." },
-        { name: "Frequently Asked Questions", href: "/admissions#faq", desc: "Answers regarding student-teacher ratios, meals, and bus safety." },
+        { name: "Frequently Asked Questions", href: "/admissions#faq", desc: "Everything parents would like to know about admissions, routines, and safety at WEE SPRITES." },
       ],
     },
     {
